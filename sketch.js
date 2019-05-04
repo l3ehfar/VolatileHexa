@@ -1,21 +1,35 @@
-let cirPath = [];
-let triPath = [];
-let spacing = 30;
-let theta = 0;
-var morph;
-var r = 100;
-function polarToCartesian(r, angle) {
-  return createVector(r * cos(angle), r * sin(angle));
-}
+let noiseMax = 0.5;
+let zoff = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  morph = new Morph(r);
-  morph.morphDo();
+}
+function draw() {
+  background(51);
+  push();
+  mainShow(24);
+  pop();
 }
 
-function draw() {
-  background(0);
-  mainShow();
+function polygon(x, y, npoints) {
+  let radius;
+  let angle = 360 / npoints;
+  rotate(map(mouseX, 0, width, 0, 45));
+  beginShape();
+  noiseMax = map(mouseX, 0, width, 0, 10);
+  for (let a = 0; a < 360; a += angle) {
+    let xoff = map(cos(a), -1, 1, 0, noiseMax);
+    let yoff = map(sin(a), -1, 1, 0, noiseMax);
+    if (a % 30 == 0) {
+      radius = 92.5285101664;
+    } else {
+      radius = 100;
+    }
+    let sx = x + cos(a) * radius;
+    let sy = y + sin(a) * radius;
+    vertex(sx, sy);
+    console.log(a);
+  }
+  endShape(CLOSE);
 }
