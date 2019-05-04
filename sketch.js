@@ -1,6 +1,6 @@
 let cirPath = [];
 let triPath = [];
-let spacing = 30;
+let spacing = 15;
 let theta = 0;
 var morph;
 var r = 100;
