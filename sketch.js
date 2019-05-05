@@ -22,7 +22,7 @@ function polygon(x, y, npoints) {
     let xoff = map(cos(a), -1, 1, 0, noiseMax);
     let yoff = map(sin(a), -1, 1, 0, noiseMax);
     if (a % 30 == 0) {
-      radius = 92.5285101664;
+      radius = 89.658;
     } else {
       radius = 100;
     }
