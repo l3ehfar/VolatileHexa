@@ -21,15 +21,23 @@ function polygon(x, y, npoints) {
   for (let a = 0; a < 360; a += angle) {
     let xoff = map(cos(a), -1, 1, 0, noiseMax);
     let yoff = map(sin(a), -1, 1, 0, noiseMax);
-    if (a % 30 == 0) {
-      radius = 89.658;
+    if (2 * angle == 30) {
+      if (a % 30 == 0) {
+        radius = map(mouseX, 0, width, 89.658, 110.342);
+      } else {
+        radius = 100;
+      }
     } else {
-      radius = 100;
+      if (a % 60 == 0) {
+        radius = map(mouseX, 0, width, 100, 100);
+      } else {
+        radius = 100;
+      }
     }
     let sx = x + cos(a) * radius;
     let sy = y + sin(a) * radius;
     vertex(sx, sy);
-    console.log(a);
+    zoff += 0.001;
   }
   endShape(CLOSE);
 }
