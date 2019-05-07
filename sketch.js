@@ -1,4 +1,5 @@
-let noiseMax = 0.5;
+var n = 12;
+let noiseMax = 0.001;
 let zoff = 0;
 
 function setup() {
@@ -7,8 +8,13 @@ function setup() {
 }
 function draw() {
   background(51);
+  if (mouseY <= height / 2) {
+    n = 12;
+  } else {
+    n = 24;
+  }
   push();
-  mainShow(24);
+  mainShow(n);
   pop();
 }
 
