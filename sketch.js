@@ -3,7 +3,7 @@ let triPath = [];
 let spacing = 15;
 let theta = 0;
 var morph;
-var r = 100;
+
 function polarToCartesian(r, angle) {
   return createVector(r * cos(angle), r * sin(angle));
 }
@@ -11,7 +11,7 @@ function polarToCartesian(r, angle) {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  morph = new Morph(r);
+  morph = new Morph();
   morph.morphDo();
 }
 

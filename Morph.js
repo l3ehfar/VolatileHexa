@@ -1,30 +1,13 @@
 let radius;
 class Morph {
-  constructor(r_) {
-    radius = r_;
-  }
   morphDo() {
     let startA = 0;
     let endA = 120;
     let start = polarToCartesian(radius, startA);
     let end = polarToCartesian(radius, endA);
     for (let a = startA; a < 360; a += spacing) {
-      if (a % 2 == 0) {
-        var a_ = a * 4;
-        let cv = polarToCartesian(radius, a_);
-        cirPath.push(cv);
-        let amt = (a_ % 120) / (endA - startA);
-        let tv = p5.Vector.lerp(start, end, amt);
-        triPath.push(tv);
-
-        if (a_ % 120 === 0) {
-          startA = startA + 120;
-          endA = endA + 120;
-          start = polarToCartesian(radius, startA);
-          end = polarToCartesian(radius, endA);
-        }
-      } else {
-        let cv = polarToCartesian(radius, a);
+      if (a % 30 == 0) {
+        let cv = polarToCartesian(89, a);
         cirPath.push(cv);
         let amt = (a % 120) / (endA - startA);
         let tv = p5.Vector.lerp(start, end, amt);
@@ -33,8 +16,21 @@ class Morph {
         if (a % 120 === 0) {
           startA = startA + 120;
           endA = endA + 120;
-          start = polarToCartesian(radius, startA);
-          end = polarToCartesian(radius, endA);
+          start = polarToCartesian(89, startA);
+          end = polarToCartesian(89, endA);
+        } else {
+          let cv = polarToCartesian(100, a);
+          cirPath.push(cv);
+          let amt = (a % 120) / (endA - startA);
+          let tv = p5.Vector.lerp(start, end, amt);
+          triPath.push(tv);
+
+          if (a % 120 === 0) {
+            startA = startA + 120;
+            endA = endA + 120;
+            start = polarToCartesian(100, startA);
+            end = polarToCartesian(100, endA);
+          }
         }
       }
     }
