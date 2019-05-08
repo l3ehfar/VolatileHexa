@@ -1,5 +1,4 @@
 let radius;
-var cv;
 class Morph {
   morphDo() {
     let startA = 0;
@@ -8,20 +7,20 @@ class Morph {
     let end = polarToCartesian(radius, endA);
     for (let a = startA; a < 360; a += spacing) {
       if (a % 30 == 0) {
-        cv = polarToCartesian(89, a);
+        radius = map(mouseX, 0, width, 89, 110);
       } else {
-        cv = polarToCartesian(100, a);
+        radius = 100;
       }
+      let cv = polarToCartesian(radius, a);
       cirPath.push(cv);
       let amt = (a % 120) / (endA - startA);
       let tv = p5.Vector.lerp(start, end, amt);
       triPath.push(tv);
-
       if (a % 120 === 0) {
         startA = startA + 120;
         endA = endA + 120;
-        start = polarToCartesian(100, startA);
-        end = polarToCartesian(100, endA);
+        start = polarToCartesian(radius, startA);
+        end = polarToCartesian(radius, endA);
       }
     }
   }
