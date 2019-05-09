@@ -6,8 +6,12 @@ class Morph {
     let start = polarToCartesian(radius, startA);
     let end = polarToCartesian(radius, endA);
     for (let a = startA; a < 360; a += spacing) {
-      if (a % 30 == 0) {
-        radius = map(mouseX, 0, width, 89, 110);
+      if (spacing == 15) {
+        if (a % 30 == 0) {
+          radius = map(mouseX, 0, width, 89, 110);
+        } else {
+          radius = 100;
+        }
       } else {
         radius = 100;
       }

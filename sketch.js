@@ -1,9 +1,8 @@
 let cirPath = [];
 let triPath = [];
-let spacing = 15;
+var spacing = 15;
 let theta = 0;
 var morph;
-
 function polarToCartesian(r, angle) {
   return createVector(r * cos(angle), r * sin(angle));
 }
