@@ -8,132 +8,96 @@ function mainShow(n) {
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2, height / 2 - 133.4);
+  translate(width / 2, height / 2 - 127);
 
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2, height / 2 + 133.4);
+  translate(width / 2, height / 2 + 127);
 
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2 + 116, height / 2 + 66.66);
+  translate(width / 2 + 109, height / 2 + 64);
 
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2 - 116, height / 2 + 66.6);
+  translate(width / 2 - 109, height / 2 + 64);
 
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2 - 116, height / 2 - 66.6);
+  translate(width / 2 - 109, height / 2 - 64);
 
   polygon(0, 0, n);
   pop();
   push();
-  translate(width / 2 + 116, height / 2 - 66.6);
+  translate(width / 2 + 109, height / 2 - 64);
 
   polygon(0, 0, n);
   pop();
 
   push();
-  translate(
-    width / 2 + 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 - 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 + 2 * 127 * sin(60), height / 2 - 2 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 - 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 - 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 - 2 * 127 * sin(60), height / 2 - 2 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 + 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 + 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 + 2 * 127 * sin(60), height / 2 + 2 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 - 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 + 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 - 2 * 127 * sin(60), height / 2 + 2 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
 
   push();
-  translate(
-    width / 2 - (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 + 3 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 - 127 * sin(60), height / 2 + 3 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 + (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 + 3 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 + 127 * sin(60), height / 2 + 3 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 - (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 - 3 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 - 127 * sin(60), height / 2 - 3 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 + (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2 - 3 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2 + 127 * sin(60), height / 2 - 3 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
 
   push();
-  translate(
-    width / 2 + 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2
-  );
+  translate(width / 2 + 2 * 127 * sin(60), height / 2);
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2 - 2 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(60),
-    height / 2
-  );
+  translate(width / 2 - 2 * 127 * sin(60), height / 2);
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2,
-    height / 2 - 4 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2, height / 2 - 4 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
   push();
-  translate(
-    width / 2,
-    height / 2 + 4 * (sin(60) * 25.882 * 4 + 25.882 * 2) * sin(30)
-  );
+  translate(width / 2, height / 2 + 4 * 127 * sin(30));
 
-  //polygon(0, 0, n);
+  polygon(0, 0, n);
   pop();
 }
