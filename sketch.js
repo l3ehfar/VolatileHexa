@@ -1,13 +1,12 @@
 var n = 6;
 let noiseMax = 0.001;
 let zoff = 0;
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 }
 function draw() {
-  background(51);
+  background(0);
   push();
   keyPressed();
   mainShow(n);
