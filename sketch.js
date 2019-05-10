@@ -9,10 +9,19 @@ function setup() {
 function draw() {
   background(51);
   push();
+  keyPressed();
   mainShow(n);
   pop();
 }
-
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    n = 36;
+  } else if (keyCode === RIGHT_ARROW) {
+    n = 12;
+  } else if (keyCode === UP_ARROW) {
+    n = 24;
+  }
+}
 function polygon(x, y, npoints) {
   let radius;
   let angle = 360 / npoints;
@@ -28,11 +37,19 @@ function polygon(x, y, npoints) {
       } else {
         radius = 100;
       }
-    } else {
+    } else if (2 * angle == 60) {
       if (a % 60 == 0) {
         radius = map(mouseX, 0, width, 100, 100);
       } else {
         radius = 100;
+      }
+    } else if (2 * angle == 20) {
+      if (a % 60 == 0) {
+        radius = map(mouseX, 0, width, 87, 113);
+      } else if (a % 30 == 0) {
+        radius = 100;
+      } else {
+        radius = 98;
       }
     }
     let sx = x + cos(a) * radius;
