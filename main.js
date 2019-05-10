@@ -10,6 +10,14 @@ function mainShow(n) {
       sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
       127
     );
+  } else if (n == 6) {
+    var d = map(
+      mouseY,
+      20,
+      height - 20,
+      sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
+      200 * sin(60)
+    );
   } else {
     var d = map(
       mouseY,

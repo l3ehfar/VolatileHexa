@@ -1,4 +1,4 @@
-var n = 24;
+var n = 6;
 let noiseMax = 0.001;
 let zoff = 0;
 
@@ -20,12 +20,16 @@ function keyPressed() {
     n = 12;
   } else if (keyCode === UP_ARROW) {
     n = 24;
+  } else if (keyCode === DOWN_ARROW) {
+    n = 6;
   }
 }
 function polygon(x, y, npoints) {
   let radius;
   let angle = 360 / npoints;
-  rotate(map(mouseX, 0, width, 0, 45));
+  if (n != 6) {
+    rotate(map(mouseX, 0, width, 0, 45));
+  }
   beginShape();
   noiseMax = map(mouseX, 0, width, 0, 10);
   for (let a = 0; a < 360; a += angle) {
@@ -51,6 +55,8 @@ function polygon(x, y, npoints) {
       } else {
         radius = 98;
       }
+    } else {
+      radius = 100;
     }
     let sx = x + cos(a) * radius;
     let sy = y + sin(a) * radius;
