@@ -1,13 +1,10 @@
 function first(w, h) {
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 300 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 100 * sin(60)
-  ) {
+  if (itsOn == 600) {
     z1 = 200;
     stroke(z1);
   } else {
     if (z1 >= 30) {
-      z1 = z1 * 0.995;
+      z1 = z1 * 0.9;
       stroke(z1);
     }
   }
@@ -55,15 +52,12 @@ function first(w, h) {
   pop();
 
   stroke(30);
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 500 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 300 * sin(60)
-  ) {
+  if (itsOn < 500 && itsOn >= 400) {
     z2 = 200;
     stroke(z2);
   } else {
     if (z2 >= 30) {
-      z2 = z2 * 0.995;
+      z2 = z2 * 0.88;
       stroke(z2);
     }
   }

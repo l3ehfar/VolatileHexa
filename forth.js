@@ -1,14 +1,11 @@
 function forth(w, h) {
   stroke(30);
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 900 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 700 * sin(60)
-  ) {
-    z4 = 200;
+  if (itsOn < 350 && itsOn >= 250) {
+    z4 = 150;
     stroke(z4);
   } else {
     if (z4 >= 30) {
-      z4 = z4 * 0.995;
+      z4 = z4 * 0.91;
       stroke(z4);
     }
   }

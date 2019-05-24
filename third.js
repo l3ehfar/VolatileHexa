@@ -1,14 +1,11 @@
 function third(w, h) {
   stroke(30);
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 700 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 500 * sin(60)
-  ) {
+  if (itsOn < 450 && itsOn >= 350) {
     z3 = 200;
     stroke(z3);
   } else {
     if (z3 >= 30) {
-      z3 = z3 * 0.995;
+      z3 = z3 * 0.92;
       stroke(z3);
     }
   }

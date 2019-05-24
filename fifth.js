@@ -1,14 +1,11 @@
 function fifth(w, h) {
   stroke(30);
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 1100 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 900 * sin(60)
-  ) {
-    z5 = 200;
+  if (itsOn < 300 && itsOn >= 200) {
+    z5 = 150;
     stroke(z5);
   } else {
     if (z5 >= 30) {
-      z5 = z5 * 0.995;
+      z5 = z5 * 0.95;
       stroke(z5);
     }
   }

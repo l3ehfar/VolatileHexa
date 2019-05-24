@@ -1,14 +1,11 @@
 function sixth(w, h) {
   stroke(30);
-  if (
-    dist(mouseX, mouseY, width / 2, height / 2) <= 1300 * sin(60) &&
-    dist(mouseX, mouseY, width / 2, height / 2) >= 1000 * sin(60)
-  ) {
-    z6 = 200;
+  if (itsOn < 250 && itsOn >= 150) {
+    z6 = 150;
     stroke(z6);
   } else {
     if (z6 >= 30) {
-      z6 = z6 * 0.995;
+      z6 = z6 * 0.99;
       stroke(z6);
     }
   }
