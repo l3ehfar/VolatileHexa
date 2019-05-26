@@ -52,6 +52,7 @@ function first(w, h) {
   pop();
 
   stroke(30);
+  noFill();
   if (itsOn < 500 && itsOn >= 400) {
     z2 = 200;
     stroke(z2);

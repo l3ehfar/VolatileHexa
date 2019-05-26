@@ -6,8 +6,9 @@ var fft = [];
 var peakDetect = [];
 var vol;
 var itsOn;
-
+var c = 1;
 EXT = ".mp3";
+var z1, z2, z3, z4, z5, z6;
 
 function preload() {
   for (let i = 1; i < 4; ++i) {
@@ -27,7 +28,8 @@ function setup() {
   }
 }
 function draw() {
-  background(0);
+  vol = amp[3].getLevel();
+  background(c);
   smooth();
   frameRate(40);
   for (let i = 1; i < 4; ++i) {
@@ -39,12 +41,10 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }
-  vol = amp[3].getLevel();
   push();
   keyPressed();
   mainShow(n);
   pop();
-  console.log(vol);
 }
 function touchStarted() {
   getAudioContext().resume();

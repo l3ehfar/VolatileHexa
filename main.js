@@ -1,11 +1,9 @@
-var z1, z2, z3, z4, z5, z6;
-
 function mainShow(n) {
   stroke(200);
   strokeWeight(5);
   noFill();
   if (n == 36) {
-    var d = map(vol * 100, 0, 15, 127, 137);
+    var d = map(vol * 100, 0, 15, 127, 132);
   } else if (n == 6) {
     var d = map(
       vol * 100,
