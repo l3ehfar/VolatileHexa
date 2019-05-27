@@ -1,5 +1,4 @@
 function mainShow(n) {
-  stroke(200);
   strokeWeight(5);
   noFill();
   if (n == 36) {
@@ -23,7 +22,7 @@ function mainShow(n) {
   }
   var w = d * sin(60);
   var h = d * sin(30);
-
+  centerColor();
   push();
   translate(width / 2, height / 2);
   if (n == 24) {
@@ -31,7 +30,6 @@ function mainShow(n) {
   }
   polygon(0, 0, n);
   pop();
-  stroke(30);
   first(w, h);
   third(w, h);
   forth(w, h);

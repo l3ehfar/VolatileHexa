@@ -1,5 +1,5 @@
 function fifth(w, h) {
-  stroke(30);
+  /*stroke(30);
   if (itsOn < 300 && itsOn >= 200) {
     z5 = 150;
     stroke(z5);
@@ -8,7 +8,7 @@ function fifth(w, h) {
       z5 = z5 * 0.95;
       stroke(z5);
     }
-  }
+  }*/
   push();
   translate(width / 2 - 5 * w, height / 2 + h);
   if (n == 24) {

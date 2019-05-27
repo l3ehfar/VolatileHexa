@@ -1,5 +1,5 @@
 function sixth(w, h) {
-  stroke(30);
+  /*stroke(30);
   if (itsOn < 250 && itsOn >= 150) {
     z6 = 150;
     stroke(z6);
@@ -8,7 +8,7 @@ function sixth(w, h) {
       z6 = z6 * 0.99;
       stroke(z6);
     }
-  }
+  }*/
   push();
   translate(width / 2 - 5 * w, height / 2 + 7 * h);
   if (n == 24) {

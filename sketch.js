@@ -8,7 +8,17 @@ var vol;
 var itsOn;
 var c = 1;
 EXT = ".mp3";
-var z1, z2, z3, z4, z5, z6;
+var z = 4,
+  z0 = 60,
+  z1 = 4,
+  z2 = 60,
+  z3 = 4,
+  z4 = 60,
+  z5 = 4,
+  z6 = 60;
+var z_ = 15.2,
+  z0_ = 200;
+(z1_ = 15.2), (z2_ = 200), (z3_ = 15.2), (z4_ = 200), (z5_ = 15.2), (z6_ = 200);
 
 function preload() {
   for (let i = 1; i < 4; ++i) {
@@ -42,21 +52,9 @@ function draw() {
     itsOn *= 0.99;
   }
   push();
-  keyPressed();
   mainShow(n);
   pop();
 }
 function touchStarted() {
   getAudioContext().resume();
-}
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    n = 36;
-  } else if (keyCode === RIGHT_ARROW) {
-    n = 12;
-  } else if (keyCode === UP_ARROW) {
-    n = 24;
-  } else if (keyCode === DOWN_ARROW) {
-    n = 6;
-  }
 }

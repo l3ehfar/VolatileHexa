@@ -1,6 +1,6 @@
 function forth(w, h) {
-  stroke(30);
-  if (itsOn < 350 && itsOn >= 250) {
+  /*stroke(30);
+   if (itsOn < 350 && itsOn >= 250) {
     z4 = 150;
     stroke(z4);
   } else {
@@ -8,7 +8,7 @@ function forth(w, h) {
       z4 = z4 * 0.91;
       stroke(z4);
     }
-  }
+  }*/
   push();
   translate(width / 2 - 4 * w, height / 2);
   if (n == 24) {
