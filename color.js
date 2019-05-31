@@ -6,11 +6,11 @@ function colored() {
         z += 0.1;
       } else if (z >= 60) {
         stroke(z0);
-        if (z0 >= 4) {
+        if (z0 >= 2) {
           z0 -= 0.1;
-        } else if (z0 <= 4) {
+        } else if (z0 <= 2) {
           n = 12;
-          z = 4;
+          z = 2;
           z0 = 60;
         }
       }
@@ -21,11 +21,11 @@ function colored() {
         z1 += 0.1;
       } else if (z1 >= 60) {
         stroke(z2);
-        if (z2 >= 4) {
+        if (z2 >= 2) {
           z2 -= 0.1;
-        } else if (z2 <= 4) {
+        } else if (z2 <= 2) {
           n = 24;
-          z1 = 4;
+          z1 = 2;
           z2 = 60;
         }
       }
@@ -36,11 +36,11 @@ function colored() {
         z3 += 0.1;
       } else if (z3 >= 60) {
         stroke(z4);
-        if (z4 >= 4) {
+        if (z4 >= 2) {
           z4 -= 0.1;
-        } else if (z4 <= 4) {
+        } else if (z4 <= 2) {
           n = 36;
-          z3 = 4;
+          z3 = 2;
           z4 = 60;
         }
       }
@@ -51,12 +51,12 @@ function colored() {
         z5 += 0.1;
       } else if (z5 >= 60) {
         stroke(z6);
-        if (z6 >= 4) {
+        if (z6 >= 2) {
           z6 -= 0.1;
-        } else if (z6 <= 4) {
+        } else if (z6 <= 2) {
           n = 6;
           z6 = 60;
-          z5 = 4;
+          z5 = 2;
         }
       }
       break;

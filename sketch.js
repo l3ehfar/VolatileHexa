@@ -8,17 +8,34 @@ var vol;
 var itsOn;
 var c = 1;
 EXT = ".mp3";
-var z = 4,
+var z = 2,
   z0 = 60,
-  z1 = 4,
+  z1 = 2,
   z2 = 60,
-  z3 = 4,
+  z3 = 2,
   z4 = 60,
-  z5 = 4,
-  z6 = 60;
-var z_ = 15.2,
+  z5 = 2,
+  z6 = 60,
+  z10,
+  z11,
+  z12,
+  z13,
+  z14,
+  z15,
+  z16,
+  z17;
+var ang1 = 0.0,
+  ang2 = 0.0,
+  ang3 = 0.0,
+  ang4 = 0.0,
+  ang5 = 0.0,
+  ang6 = 0.0,
+  ang7 = 0.0,
+  ang8 = 0.0;
+var z_ = 8.6,
   z0_ = 200;
-(z1_ = 15.2), (z2_ = 200), (z3_ = 15.2), (z4_ = 200), (z5_ = 15.2), (z6_ = 200);
+(z1_ = 8.6), (z2_ = 200), (z3_ = 8.6), (z4_ = 200), (z5_ = 8.6), (z6_ = 200);
+var picked = [];
 
 function preload() {
   for (let i = 1; i < 4; ++i) {
@@ -51,9 +68,7 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }
-  push();
   mainShow(n);
-  pop();
 }
 function touchStarted() {
   getAudioContext().resume();

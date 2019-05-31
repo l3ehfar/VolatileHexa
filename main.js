@@ -30,9 +30,5 @@ function mainShow(n) {
   }
   polygon(0, 0, n);
   pop();
-  first(w, h);
-  third(w, h);
-  forth(w, h);
-  fifth(w, h);
-  sixth(w, h);
+  pattern(w, h);
 }
