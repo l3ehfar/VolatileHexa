@@ -79,7 +79,13 @@ function polygon(x, y, npoints) {
       } else if (a % 30 == 0) {
         radius = 100;
       } else {
-        radius = 100;
+        if (timer >= 74000.0 && timer <= 80000.0) {
+          radius = map(timer, 74000.0, 80000.0, 100, 98);
+        } else if (timer >= 74000 && timer <= 96000) {
+          radius = 98;
+        } else if (timer >= 96000 && timer <= 98000) {
+          radius = map(timer, 96000, 98000, 98, 100);
+        }
       }
     } else {
       radius = 100;
