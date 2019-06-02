@@ -10,16 +10,16 @@ function mainShow(n) {
       sin(60) * 25.882 * 4 + 25.882 * 2 * 2
     );
   }
-  if (n >= 36) {
-    if (timer >= 74000.0 && timer <= 80000.0) {
+  if (n > 24) {
+    if (timer >= 70000.0 && timer <= 74000.0) {
       var d = map(
         timer,
+        70000.0,
         74000.0,
-        80000.0,
         sin(60) * 25.882 * 4 + 25.882 * 2,
         127
       );
-    } else if (timer >= 80000 && timer <= 96000) {
+    } else if (timer >= 74000 && timer <= 96000) {
       var d = 127;
     } else if (timer >= 96000 && timer <= 98000) {
       var d = map(
@@ -50,7 +50,7 @@ function mainShow(n) {
       sin(60) * 25.882 * 4 + 25.882 * 2 * 1.93,
       sin(60) * 25.882 * 4 + 25.882 * 2 * 2
     )*/
-  } else if (n >= 12 && n < 36) {
+  } else if (n >= 12 && n <= 24) {
     var d =
       sin(60) * 25.882 * 4 +
       25.882 *

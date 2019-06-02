@@ -79,7 +79,7 @@ function polygon(x, y, npoints) {
       } else if (a % 30 == 0) {
         radius = 100;
       } else {
-        radius = 98;
+        radius = 100;
       }
     } else {
       radius = 100;
