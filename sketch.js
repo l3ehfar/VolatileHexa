@@ -81,7 +81,14 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }*/
+  autoTransition();
+  mainShow(n);
+}
+function touchStarted() {
+  getAudioContext().resume();
+}
 
+function autoTransition() {
   if (timer >= 5000.0 && timer <= 20000.0) {
     n = map(timer, 5000.0, 20000.0, 6, 12);
   } else if (timer >= 20000 && timer <= 35000) {
@@ -94,14 +101,14 @@ function draw() {
     n = map(timer, 70000, 74000, 24, 36);
   } else if (timer >= 74000 && timer <= 98000) {
     n = 36;
-  } else if (timer >= 98000 && timer <= 102000) {
-    n = map(timer, 98000, 102000, 36, 6);
-  } else if (timer >= 102000) {
+  } else if (timer >= 98000 && timer <= 100000) {
+    n = map(timer, 98000, 100000, 36, 24);
+  } else if (timer >= 100000 && timer <= 102000) {
+    n = map(timer, 100000, 102000, 24, 12);
+  } else if (timer >= 102000 && timer <= 104000) {
+    n = map(timer, 102000, 104000, 12, 6);
+  } else if (timer >= 104000) {
     last = millis();
     n = 6;
   }
-  mainShow(n);
-}
-function touchStarted() {
-  getAudioContext().resume();
 }
