@@ -5,11 +5,11 @@ function mainShow(n) {
     var d = 127; /*map(vol * 100, 0, 15, 127, 132)*/
   } else if (n < 12) {
     var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
-    if (frameCount >= 50 && frameCount <= 600) {
+    if (timer >= 5000.0 && timer <= 20000.0) {
       var d = map(
-        frameCount,
-        50,
-        600,
+        timer,
+        5000.0,
+        20000.0,
         sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
         sin(60) * 25.882 * 4 + 25.882 * 2
       );
@@ -20,7 +20,7 @@ function mainShow(n) {
       sin(60) * 25.882 * 4 + 25.882 * 2 * 1.93,
       sin(60) * 25.882 * 4 + 25.882 * 2 * 2
     )*/
-  } else {
+  } else if (n >= 12) {
     var d =
       sin(60) * 25.882 * 4 +
       25.882 *

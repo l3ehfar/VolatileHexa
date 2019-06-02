@@ -7,6 +7,8 @@ var peakDetect = [];
 var vol;
 var itsOn;
 var c = 1;
+var timer;
+var last = 0;
 EXT = ".mp3";
 var z = 20,
   z0 = 60,
@@ -68,6 +70,7 @@ function draw() {
   background(26);
   smooth();
   frameRate(40);
+  timer = millis();
   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
@@ -78,7 +81,16 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }*/
-  n = 24;
+
+  if (timer >= 5000.0 && timer <= 20000.0) {
+    n = map(timer, 5000.0, 20000.0, 6, 12);
+  } else if (timer >= 20000 && timer <= 35000) {
+    n = 12;
+  } else if (timer >= 35000.0 && timer <= 42000.0) {
+    n = map(timer, 35000.0, 42000.0, 12, 24);
+  } else if (timer >= 42000) {
+    n = 24;
+  }
   mainShow(n);
 }
 function touchStarted() {
