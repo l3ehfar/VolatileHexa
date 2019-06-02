@@ -1,7 +1,7 @@
 function pattern(w, h) {
   first(w, h);
   third(w, h);
-  stroke(30);
+  stroke(40);
   for (var i = -8; i <= 8; i++) {
     if (i % 2 == 0) {
       for (j = -14; j <= 14; j += 2) {

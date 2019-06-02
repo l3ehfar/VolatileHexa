@@ -1,5 +1,5 @@
 function third(w, h) {
-  stroke(51);
+  stroke(65);
   if (itsOn < 450 && itsOn >= 350) {
     z3 = 200;
     stroke(z3);

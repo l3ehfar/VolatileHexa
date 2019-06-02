@@ -1,5 +1,5 @@
 function first(w, h) {
-  stroke(150);
+  stroke(160);
   /*if (itsOn == 600) {
     z1 = 200;
     stroke(z1);
@@ -52,7 +52,7 @@ function first(w, h) {
   polygon(0, 0, n);
   pop();
 
-  stroke(80);
+  stroke(100);
   /*if (itsOn < 500 && itsOn >= 400) {
     z2 = 200;
     stroke(z2);

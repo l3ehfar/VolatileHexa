@@ -1,11 +1,41 @@
 function mainShow(n) {
   strokeWeight(5);
   noFill();
-  if (n == 36) {
-    var d = 127; /*map(vol * 100, 0, 15, 127, 132)*/
+  if (timer >= 98000 && timer <= 102000) {
+    var d = map(
+      timer,
+      98000,
+      102000,
+      sin(60) * 25.882 * 4 + 25.882 * 2,
+      sin(60) * 25.882 * 4 + 25.882 * 2 * 2
+    );
+  }
+  if (n >= 36) {
+    if (timer >= 74000.0 && timer <= 80000.0) {
+      var d = map(
+        timer,
+        74000.0,
+        80000.0,
+        sin(60) * 25.882 * 4 + 25.882 * 2,
+        127
+      );
+    } else if (timer >= 80000 && timer <= 96000) {
+      var d = 127;
+    } else if (timer >= 96000 && timer <= 98000) {
+      var d = map(
+        timer,
+        96000.0,
+        98000.0,
+        127,
+        sin(60) * 25.882 * 4 + 25.882 * 2
+      );
+    } else if (timer >= 98000) {
+      var d = sin(60) * 25.882 * 4 + 25.882 * 2;
+    }
   } else if (n < 12) {
-    var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
-    if (timer >= 5000.0 && timer <= 20000.0) {
+    if (timer <= 5000.0) {
+      var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
+    } else if (timer >= 5000.0 && timer <= 20000.0) {
       var d = map(
         timer,
         5000.0,
@@ -20,7 +50,7 @@ function mainShow(n) {
       sin(60) * 25.882 * 4 + 25.882 * 2 * 1.93,
       sin(60) * 25.882 * 4 + 25.882 * 2 * 2
     )*/
-  } else if (n >= 12) {
+  } else if (n >= 12 && n < 36) {
     var d =
       sin(60) * 25.882 * 4 +
       25.882 *
@@ -40,7 +70,7 @@ function mainShow(n) {
   if (n == 24) {
     rotate(15);
   }
-  stroke(250);
+  stroke(255);
   polygon(0, 0, n);
   pop();
   pattern(w, h);

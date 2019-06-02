@@ -70,7 +70,7 @@ function draw() {
   background(26);
   smooth();
   frameRate(40);
-  timer = millis();
+  timer = millis() - last;
   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
@@ -88,8 +88,17 @@ function draw() {
     n = 12;
   } else if (timer >= 35000.0 && timer <= 42000.0) {
     n = map(timer, 35000.0, 42000.0, 12, 24);
-  } else if (timer >= 42000) {
+  } else if (timer >= 42000 && timer <= 65000) {
     n = 24;
+  } else if (timer >= 70000 && timer <= 74000) {
+    n = map(timer, 70000, 74000, 24, 36);
+  } else if (timer >= 74000 && timer <= 98000) {
+    n = 36;
+  } else if (timer >= 98000 && timer <= 102000) {
+    n = map(timer, 98000, 102000, 36, 6);
+  } else if (timer >= 102000) {
+    last = millis();
+    n = 6;
   }
   mainShow(n);
 }

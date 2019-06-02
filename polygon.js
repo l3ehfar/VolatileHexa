@@ -4,14 +4,28 @@ function polygon(x, y, npoints) {
   if (n != 6) {
     if (timer <= 20000.0) {
       rotate(0);
-    } else if (timer >= 20000.0 && timer <= 27500.0) {
-      rotate(map(timer, 20000.0, 27500.0, 0, 45));
-    } else if (timer >= 27500.0 && timer <= 35000.0) {
-      rotate(map(timer, 27500.0, 35000.0, 45, 0));
+    } else if (timer >= 20000.0 && timer <= 27000.0) {
+      rotate(map(timer, 20000.0, 27000.0, 0, 45));
+    } else if (timer >= 27000.0 && timer <= 28000.0) {
+      rotate(45);
+    } else if (timer >= 28000.0 && timer <= 34000.0) {
+      rotate(map(timer, 28000.0, 34000.0, 45, 0));
+    } else if (timer >= 34000.0 && timer <= 35000.0) {
+      rotate(0);
     } else if (timer >= 47000 && timer <= 55000) {
       rotate(map(timer, 47000.0, 55000.0, 0, 45));
-    } else if (timer >= 55000) {
+    } else if (timer >= 55000 && timer <= 57000) {
       rotate(45);
+    } else if (timer >= 57000 && timer <= 65000) {
+      rotate(map(timer, 57000.0, 65000.0, 45, 0));
+    } else if (timer >= 65000 && timer <= 83000) {
+      rotate(0);
+    } else if (timer >= 83000.0 && timer <= 88000.0) {
+      rotate(map(timer, 83000.0, 88000.0, 0, 45));
+    } else if (timer >= 88000.0 && timer <= 93000.0) {
+      rotate(map(timer, 88000.0, 93000.0, 45, 0));
+    } else if (timer >= 93000.0) {
+      rotate(0);
     }
   }
   beginShape();
@@ -27,8 +41,14 @@ function polygon(x, y, npoints) {
           radius = 89.658;
         } else if (timer >= 47000.0 && timer <= 55000.0) {
           radius = map(timer, 47000.0, 55000.0, 89.658, 110.342);
-        } else if (timer >= 55000) {
+        } else if (timer >= 55000 && timer <= 57000) {
           radius = 110.342;
+        } else if (timer >= 57000 && timer <= 65000) {
+          radius = map(timer, 57000.0, 65000.0, 110.342, 89.658);
+        } else if (timer >= 65000 && timer <= 67000) {
+          radius = 89.658;
+        } else if (timer >= 67000 && timer <= 70000) {
+          radius = map(timer, 67000, 70000, 89.658, 100);
         }
       } else {
         radius = 100;
@@ -41,7 +61,21 @@ function polygon(x, y, npoints) {
       }
     } else if (2 * angle == 20) {
       if (a % 60 == 0) {
-        radius = map(mouseX, 0, width, 87, 113);
+        if (timer >= 74000.0 && timer <= 80000.0) {
+          radius = map(timer, 74000.0, 80000.0, 100, 87);
+        } else if (timer >= 80000.0 && timer <= 83000.0) {
+          radius = 87;
+        } else if (timer >= 83000.0 && timer <= 88000.0) {
+          radius = map(timer, 83000.0, 88000.0, 87, 113);
+        } else if (timer >= 88000.0 && timer <= 93000.0) {
+          radius = map(timer, 88000.0, 93000.0, 113, 87);
+        } else if (timer >= 93000.0 && timer <= 96000.0) {
+          radius = 87;
+        } else if (timer >= 96000.0 && timer <= 98000.0) {
+          radius = map(timer, 96000.0, 98000.0, 87, 100);
+        } else if (timer >= 98000) {
+          radius = 100;
+        }
       } else if (a % 30 == 0) {
         radius = 100;
       } else {
