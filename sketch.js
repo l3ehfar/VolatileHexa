@@ -89,26 +89,32 @@ function touchStarted() {
 }
 
 function autoTransition() {
-  if (timer >= 5000.0 && timer <= 20000.0) {
-    n = map(timer, 5000.0, 20000.0, 6, 12);
+  if (timer >= 3000.0 && timer <= 20000.0) {
+    n = map(timer, 3000.0, 20000.0, 6, 12);
   } else if (timer >= 20000 && timer <= 35000) {
     n = 12;
-  } else if (timer >= 35000.0 && timer <= 42000.0) {
-    n = map(timer, 35000.0, 42000.0, 12, 24);
-  } else if (timer >= 42000 && timer <= 65000) {
+  } else if (timer >= 35000.0 && timer <= 37000.0) {
+    n = map(timer, 35000.0, 37000.0, 12, 13);
+  } else if (timer >= 37000.0 && timer <= 39500.0) {
+    n = map(timer, 37000.0, 39500.0, 13, 15);
+  } else if (timer >= 39500.0 && timer <= 42000.0) {
+    n = map(timer, 39500.0, 42000.0, 15, 18);
+  } else if (timer >= 42000.0 && timer <= 46000.0) {
+    n = map(timer, 42000.0, 46000.0, 18, 24);
+  } else if (timer >= 46000 && timer <= 74000) {
     n = 24;
-  } else if (timer >= 70000 && timer <= 74000) {
-    n = map(timer, 70000, 74000, 24, 36);
-  } else if (timer >= 74000 && timer <= 98000) {
+  } else if (timer >= 74000 && timer <= 80000) {
+    n = map(timer, 74000, 80000, 24, 36);
+  } else if (timer >= 80000 && timer <= 100000) {
     n = 36;
-  } else if (timer >= 98000 && timer <= 100000) {
-    n = map(timer, 98000, 100000, 36, 24);
-  } else if (timer >= 100000 && timer <= 102000) {
-    n = map(timer, 100000, 102000, 24, 12);
-  } else if (timer >= 102000 && timer <= 104000) {
-    n = map(timer, 102000, 104000, 12, 6);
-  } else if (timer >= 104000) {
+  } /*else if (timer >= 98000 && timer <= 102000) {
+    n = map(timer, 98000, 102000, 36, 24);
+  } else if (timer >= 102000 && timer <= 106000) {
+    n = map(timer, 102000, 106000, 24, 12);
+  } else if (timer >= 106000 && timer <= 110000) {
+    n = map(timer, 106000, 110000, 12, 6);
+  } else if (timer >= 110000) {
     last = millis();
     n = 6;
-  }
+  }*/
 }
