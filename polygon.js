@@ -25,12 +25,11 @@ function polygon(x, y, npoints) {
       rotate(map(timer, 61500.0, 69500.0, 45, 0));
     } else if (timer >= 89000.0 && timer <= 98000.0) {
       rotate(map(timer, 89000.0, 98000.0, 0, 45));
-    } /*else if (timer >= 88000.0 && timer <= 93000.0) {
-      rotate(map(timer, 88000.0, 93000.0, 45, 0));
-    } else if (timer >= 93000.0) {
+    } else if (timer >= 98000.0 && timer <= 103000.0) {
+      rotate(map(timer, 98000.0, 103000.0, 45, 0));
+    } else if (timer >= 103000.0) {
       rotate(0);
     }
-    */
   }
   beginShape();
   noiseMax = map(mouseX, 0, width, 0, 10);
@@ -78,25 +77,25 @@ function polygon(x, y, npoints) {
           radius = map(timer, 85000.0, 93000.0, 87, 100);
         } else if (timer >= 93000.0 && timer <= 98000.0) {
           radius = map(timer, 93000.0, 98000.0, 100, 113);
-        } /*else if (timer >= 88000.0 && timer <= 93000.0) {
-          radius = map(timer, 88000.0, 93000.0, 113, 87);
-        } else if (timer >= 93000.0 && timer <= 96000.0) {
-          radius = 87;
-        } else if (timer >= 96000.0 && timer <= 98000.0) {
-          radius = map(timer, 96000.0, 98000.0, 87, 100);
-        } else if (timer >= 98000) {
+        } else if (timer >= 98000.0 && timer <= 103000.0) {
+          radius = map(timer, 98000.0, 103000.0, 113, 93);
+        } else if (timer >= 103000.0 && timer <= 106000.0) {
+          radius = map(timer, 103000.0, 106000.0, 93, 87);
+        } else if (timer >= 106000.0 && timer <= 111000.0) {
+          radius = map(timer, 106000.0, 111000.0, 87, 100);
+        } else if (timer >= 111000) {
           radius = 100;
-        }*/
+        }
       } else if (a % 30 == 0) {
         radius = 100;
       } else {
-        if (timer >= 80000.0 && timer <= 86000.0) {
-          radius = map(timer, 80000.0, 86000.0, 100, 98);
-        } else if (timer >= 86000 && timer <= 100000) {
+        if (timer >= 80000.0 && timer <= 85000.0) {
+          radius = map(timer, 80000.0, 85000.0, 100, 98);
+        } else if (timer >= 85000 && timer <= 106000) {
           radius = 98;
-        } /*else if (timer >= 96000 && timer <= 98000) {
-          radius = map(timer, 96000, 98000, 98, 100);
-        }*/
+        } else if (timer >= 106000 && timer <= 111000) {
+          radius = map(timer, 106000, 111000, 98, 100);
+        }
       }
     } else {
       radius = 100;

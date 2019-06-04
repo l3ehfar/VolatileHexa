@@ -105,16 +105,16 @@ function autoTransition() {
     n = 24;
   } else if (timer >= 74000 && timer <= 80000) {
     n = map(timer, 74000, 80000, 24, 36);
-  } else if (timer >= 80000 && timer <= 100000) {
+  } else if (timer >= 80000 && timer <= 111000) {
     n = 36;
-  } /*else if (timer >= 98000 && timer <= 102000) {
-    n = map(timer, 98000, 102000, 36, 24);
-  } else if (timer >= 102000 && timer <= 106000) {
-    n = map(timer, 102000, 106000, 24, 12);
-  } else if (timer >= 106000 && timer <= 110000) {
-    n = map(timer, 106000, 110000, 12, 6);
-  } else if (timer >= 110000) {
-    last = millis();
+  } else if (timer >= 111000 && timer <= 117000) {
+    n = map(timer, 111000, 117000, 36, 24);
+  } else if (timer >= 117000 && timer <= 123000) {
+    n = map(timer, 117000, 123000, 24, 12);
+  } else if (timer >= 123000 && timer <= 133000) {
+    n = map(timer, 123000, 133000, 12, 6);
+  } else if (timer >= 133000) {
+    last = map(timer, 133000, 140000, 133000, millis());
     n = 6;
-  }*/
+  }
 }

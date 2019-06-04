@@ -10,19 +10,19 @@ function mainShow(n) {
         sin(60) * 25.882 * 4 + 25.882 * 2,
         127
       );
-    } else if (timer >= 80000 && timer <= 100000) {
+    } else if (timer >= 80000 && timer <= 111000) {
       var d = 127;
-    } /*else if (timer >= 96000 && timer <= 98000) {
+    } else if (timer >= 111000 && timer <= 117000) {
       var d = map(
         timer,
-        96000.0,
-        98000.0,
+        111000.0,
+        117000.0,
         127,
         sin(60) * 25.882 * 4 + 25.882 * 2
       );
-    } else if (timer >= 98000 && timer <= 102000) {
+    } else if (timer >= 117000 && timer <= 123000) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2;
-    }*/
+    }
   } else if (n < 12) {
     if (timer <= 3000.0) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
@@ -34,15 +34,15 @@ function mainShow(n) {
         sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
         sin(60) * 25.882 * 4 + 25.882 * 2
       );
-    } /* else if (timer >= 106000 && timer <= 110000) {
+    } else if (timer >= 123000 && timer <= 133000) {
       var d = map(
         timer,
-        106000,
-        110000,
+        123000,
+        133000,
         sin(60) * 25.882 * 4 + 25.882 * 2,
         sin(60) * 25.882 * 4 + 25.882 * 2 * 2
       );
-    }*/
+    }
   } else if (n >= 12 && n <= 24) {
     var d = sin(60) * 25.882 * 4 + 25.882 * 2;
   }
