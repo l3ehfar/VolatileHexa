@@ -1,5 +1,5 @@
 var n = 6;
-let noiseMax = 0.001;
+let noiseMax = 0;
 var carrier = [];
 var amp = [];
 var fft = [];
@@ -10,26 +10,15 @@ var c = 1;
 var timer;
 var last = 0;
 EXT = ".mp3";
-var z = 20,
-  z0 = 60,
-  z1 = 20,
-  z2 = 60,
-  z3 = 10,
-  z4 = 60,
-  z5 = 10,
-  z6 = 60,
-  z10,
-  z11,
-  z12,
-  z13,
-  z14,
-  z15,
-  z16,
-  z17,
-  z18,
-  z19,
-  z20,
-  z21;
+var z3 = 10,
+  z1 = 0,
+  z2 = 0,
+  z4 = 0,
+  z5 = 0,
+  z6 = 0,
+  z7 = 0,
+  z8 = 0,
+  z9 = 0;
 var ang1 = 0.0,
   ang2 = 0.0,
   ang3 = 0.0,
@@ -37,24 +26,16 @@ var ang1 = 0.0,
   ang5 = 0.0,
   ang6 = 0.0,
   ang7 = 0.0,
-  ang8 = 0.0,
-  ang9 = 0.0,
-  ang10 = 0.0,
-  ang11 = 0.0,
-  ang12 = 0.0;
-var z_ = 8.6,
-  z0_ = 200;
-(z1_ = 8.6), (z2_ = 200), (z3_ = 8.6), (z4_ = 200), (z5_ = 8.6), (z6_ = 200);
-var picked = [];
-
-/*function preload() {
-  for (let i = 1; i < 4; ++i) {
+  ang8 = 0.0;
+function preload() {
+  for (let i = 1; i < 9; ++i) {
     carrier[i] = loadSound(i + EXT);
   }
-}*/
+}
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+  carrier[1].loop();
   /*
   for (let i = 1; i < 4; ++i) {
     carrier[i].play();
@@ -70,7 +51,7 @@ function draw() {
   background(26);
   smooth();
   frameRate(40);
-  timer = millis() - last;
+  timer = int(millis() - last);
   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
@@ -89,8 +70,8 @@ function touchStarted() {
 }
 
 function autoTransition() {
-  if (timer >= 3000.0 && timer <= 20000.0) {
-    n = map(timer, 3000.0, 20000.0, 6, 12);
+  if (timer >= 2000.0 && timer <= 20000.0) {
+    n = map(timer, 2000.0, 20000.0, 6, 12);
   } else if (timer >= 20000 && timer <= 35000) {
     n = 12;
   } else if (timer >= 35000.0 && timer <= 37000.0) {
@@ -114,7 +95,7 @@ function autoTransition() {
   } else if (timer >= 123000 && timer <= 133000) {
     n = map(timer, 123000, 133000, 12, 6);
   } else if (timer >= 133000) {
-    last = map(timer, 133000, 140000, 133000, millis());
+    last = millis();
     n = 6;
   }
 }

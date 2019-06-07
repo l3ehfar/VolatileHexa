@@ -2,9 +2,9 @@ function pattern(w, h) {
   first(w, h);
   third(w, h);
   stroke(40);
-  for (var i = -8; i <= 8; i++) {
+  for (var i = -10; i <= 10; i++) {
     if (i % 2 == 0) {
-      for (j = -14; j <= 14; j += 2) {
+      for (j = -16; j <= 16; j += 2) {
         if (
           (i != 0 || j != 0) &&
           (i != 0 || j != 2) &&
@@ -22,10 +22,7 @@ function pattern(w, h) {
           (i != -2 || j != 2) &&
           (i != -2 || j != -2) &&
           (i != -2 || j != -4) &&
-          (i != -2 || j != 4)
-        ) {
-          /*if (
-          (i != 0 || j != 0) &&
+          (i != -2 || j != 4) &&
           (i != 4 || j != -4) &&
           (i != 4 || j != -2) &&
           (i != 6 || j != -2) &&
@@ -42,7 +39,7 @@ function pattern(w, h) {
           (i != -4 || j != -2) &&
           (i != -6 || j != -2) &&
           (i != -6 || j != -4)
-        ) {*/
+        ) {
           push();
           translate(width / 2 + i * w, height / 2 + j * h);
           if (n == 24) {
@@ -53,7 +50,7 @@ function pattern(w, h) {
         }
       }
     } else {
-      for (j = -13; j <= 13; j += 2) {
+      for (j = -15; j <= 15; j += 2) {
         if (
           (i != 1 || j != 1) &&
           (i != 1 || j != -1) &&
@@ -74,13 +71,11 @@ function pattern(w, h) {
           (i != -3 || j != 1) &&
           (i != -3 || j != -1) &&
           (i != -3 || j != 3) &&
-          (i != -3 || j != -3)
-        ) {
-          /*if (
+          (i != -3 || j != -3) &&
           (i != 5 || j != -3) &&
+          (i != -5 || j != 3) &&
           (i != 5 || j != -1) &&
           (i != 5 || j != -5) &&
-          (i != -5 || j != 3) &&
           (i != -5 || j != 1) &&
           (i != -5 || j != 5) &&
           (i != 5 || j != 3) &&
@@ -89,7 +84,7 @@ function pattern(w, h) {
           (i != -5 || j != -3) &&
           (i != -5 || j != -5) &&
           (i != -5 || j != -1)
-        ) {*/
+        ) {
           push();
           translate(width / 2 + i * w, height / 2 + j * h);
           if (n == 24) {
@@ -101,18 +96,19 @@ function pattern(w, h) {
       }
     }
   }
-  /*
+
   push();
   push();
-  if ((z >= 18.3 && z <= 18.4) || (z2 >= 59.8 && z2 <= 59.9)) {
+  if (timer % 211 == 0) {
     frameRate(30);
-    z10 = random(140, 150);
-    stroke(z10);
+    z1 = random(200, 250);
+    stroke(z1);
     ang1 = random(-360, 360);
+    carrier[int(random(2, 9))].play();
   } else {
-    if (z10 >= 38) {
-      z10 = z10 * 0.995;
-      stroke(z10);
+    if (z1 >= 40) {
+      z1 = z1 * 0.99;
+      stroke(z1);
     }
     ang1 = ang1 * 0.96;
   }
@@ -123,14 +119,15 @@ function pattern(w, h) {
   rotate(ang1);
   polygon(0, 0, n);
   pop();
-  if ((z >= 18.3 && z <= 18.4) || (z2 >= 59.8 && z2 <= 59.9)) {
-    z11 = random(140, 150);
-    stroke(z11);
+
+  if (timer % 211 == 0) {
+    z2 = random(140, 150);
+    stroke(z2);
     ang2 = random(-240, 240);
   } else {
-    if (z11 >= 37) {
-      z11 = z11 * 0.995;
-      stroke(z11);
+    if (z2 >= 40) {
+      z2 = z2 * 0.992;
+      stroke(z2);
     }
     ang2 = ang2 * 0.91;
   }
@@ -186,15 +183,16 @@ function pattern(w, h) {
 
   push();
   push();
-  if ((z5 >= 18.3 && z5 <= 18.4) || (z0 >= 59.8 && z0 <= 59.9)) {
+  if (timer % 219 == 0) {
     frameRate(30);
-    z12 = random(140, 150);
-    stroke(z12);
+    z4 = random(200, 250);
+    stroke(z4);
     ang3 = random(-360, 360);
+    carrier[int(random(2, 9))].play();
   } else {
-    if (z12 >= 38) {
-      z12 = z12 * 0.995;
-      stroke(z12);
+    if (z4 >= 40) {
+      z4 = z4 * 0.99;
+      stroke(z4);
     }
     ang3 = ang3 * 0.96;
   }
@@ -205,14 +203,14 @@ function pattern(w, h) {
   rotate(ang3);
   polygon(0, 0, n);
   pop();
-  if ((z5 >= 18.3 && z5 <= 18.4) || (z0 >= 59.8 && z0 <= 59.9)) {
-    z13 = random(140, 150);
-    stroke(z13);
+  if (timer % 219 == 0) {
+    z5 = random(140, 150);
+    stroke(z5);
     ang4 = random(-240, 240);
   } else {
-    if (z13 >= 37) {
-      z13 = z13 * 0.995;
-      stroke(z13);
+    if (z5 >= 40) {
+      z5 = z5 * 0.992;
+      stroke(z5);
     }
     ang4 = ang4 * 0.91;
   }
@@ -268,15 +266,16 @@ function pattern(w, h) {
 
   push();
   push();
-  if ((z1 >= 18.3 && z1 <= 18.4) || (z4 >= 59.8 && z4 <= 59.9)) {
+  if (timer % 225 == 0) {
     frameRate(30);
-    z14 = random(140, 150);
-    stroke(z14);
+    z6 = random(140, 150);
+    stroke(z6);
     ang5 = random(-360, 360);
+    carrier[int(random(2, 9))].play();
   } else {
-    if (z14 >= 38) {
-      z14 = z14 * 0.995;
-      stroke(z14);
+    if (z6 >= 40) {
+      z6 = z6 * 0.99;
+      stroke(z6);
     }
     ang5 = ang5 * 0.96;
   }
@@ -287,14 +286,14 @@ function pattern(w, h) {
   rotate(ang5);
   polygon(0, 0, n);
   pop();
-  if ((z1 >= 18.3 && z1 <= 18.4) || (z4 >= 59.8 && z4 <= 59.9)) {
-    z15 = random(140, 150);
-    stroke(z15);
+  if (timer % 225 == 0) {
+    z7 = random(140, 150);
+    stroke(z7);
     ang6 = random(-240, 240);
   } else {
-    if (z15 >= 37) {
-      z15 = z15 * 0.995;
-      stroke(z15);
+    if (z7 >= 40) {
+      z7 = z7 * 0.992;
+      stroke(z7);
     }
     ang6 = ang6 * 0.91;
   }
@@ -350,15 +349,16 @@ function pattern(w, h) {
 
   push();
   push();
-  if ((z3 >= 18.3 && z3 <= 18.4) || (z6 >= 59.8 && z6 <= 59.9)) {
+  if (timer % 231 == 0) {
     frameRate(30);
-    z16 = random(140, 150);
-    stroke(z16);
+    z8 = random(200, 250);
+    stroke(z8);
     ang7 = random(-360, 360);
+    carrier[int(random(2, 9))].play();
   } else {
-    if (z16 >= 38) {
-      z16 = z16 * 0.995;
-      stroke(z16);
+    if (z8 >= 40) {
+      z8 = z8 * 0.99;
+      stroke(z8);
     }
     ang7 = ang7 * 0.96;
   }
@@ -369,14 +369,14 @@ function pattern(w, h) {
   rotate(ang7);
   polygon(0, 0, n);
   pop();
-  if ((z3 >= 18.3 && z3 <= 18.4) || (z6 >= 59.8 && z6 <= 59.9)) {
-    z17 = random(140, 150);
-    stroke(z17);
+  if (timer % 231 == 0) {
+    z9 = random(140, 150);
+    stroke(z9);
     ang8 = random(-240, 240);
   } else {
-    if (z17 >= 37) {
-      z17 = z17 * 0.995;
-      stroke(z17);
+    if (z9 >= 40) {
+      z9 = z9 * 0.992;
+      stroke(z9);
     }
     ang8 = ang8 * 0.91;
   }
@@ -429,7 +429,7 @@ function pattern(w, h) {
   polygon(0, 0, n);
   pop();
   pop();
-
+  /*
   push();
   push();
   if (z2 >= 25.8 && z2 <= 25.9) {

@@ -24,12 +24,12 @@ function mainShow(n) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2;
     }
   } else if (n < 12) {
-    if (timer <= 3000.0) {
+    if (timer <= 2000.0) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
-    } else if (timer >= 3000.0 && timer <= 20000.0) {
+    } else if (timer >= 2000.0 && timer <= 20000.0) {
       var d = map(
         timer,
-        3000.0,
+        2000.0,
         20000.0,
         sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
         sin(60) * 25.882 * 4 + 25.882 * 2

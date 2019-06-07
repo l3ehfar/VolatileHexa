@@ -32,10 +32,7 @@ function polygon(x, y, npoints) {
     }
   }
   beginShape();
-  noiseMax = map(mouseX, 0, width, 0, 10);
   for (let a = 0; a < 360; a += angle) {
-    let xoff = map(cos(a), -1, 1, 0, noiseMax);
-    let yoff = map(sin(a), -1, 1, 0, noiseMax);
     if (2 * angle == 30) {
       if (a % 30 == 0) {
         if (timer >= 46000.0 && timer <= 49000.0) {
