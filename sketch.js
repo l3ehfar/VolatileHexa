@@ -70,8 +70,8 @@ function touchStarted() {
 }
 
 function autoTransition() {
-  if (timer >= 2000.0 && timer <= 20000.0) {
-    n = map(timer, 2000.0, 20000.0, 6, 12);
+  if (timer >= 1000.0 && timer <= 20000.0) {
+    n = map(timer, 1000.0, 20000.0, 6, 12);
   } else if (timer >= 20000 && timer <= 35000) {
     n = 12;
   } else if (timer >= 35000.0 && timer <= 37000.0) {

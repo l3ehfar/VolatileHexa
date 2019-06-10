@@ -24,12 +24,12 @@ function mainShow(n) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2;
     }
   } else if (n < 12) {
-    if (timer <= 2000.0) {
+    if (timer <= 1000.0) {
       var d = sin(60) * 25.882 * 4 + 25.882 * 2 * 2;
-    } else if (timer >= 2000.0 && timer <= 20000.0) {
+    } else if (timer >= 1000.0 && timer <= 20000.0) {
       var d = map(
         timer,
-        2000.0,
+        1000.0,
         20000.0,
         sin(60) * 25.882 * 4 + 25.882 * 2 * 2,
         sin(60) * 25.882 * 4 + 25.882 * 2
@@ -48,14 +48,5 @@ function mainShow(n) {
   }
   var w = d * sin(60);
   var h = d * sin(30);
-
-  push();
-  translate(width / 2, height / 2);
-  if (n == 24) {
-    rotate(15);
-  }
-  stroke(255);
-  polygon(0, 0, n);
-  pop();
   pattern(w, h);
 }
