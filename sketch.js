@@ -10,8 +10,8 @@ var c = 1;
 var timer;
 var last = 0;
 EXT = ".mp3";
-var z3 = 10,
-  z1 = 0,
+var z3 = 10;
+/*z1 = 0,
   z2 = 0,
   z4 = 0,
   z5 = 0,
@@ -31,11 +31,11 @@ function preload() {
   for (let i = 1; i < 9; ++i) {
     carrier[i] = loadSound(i + EXT);
   }
-}
+}*/
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  carrier[1].loop();
+  // carrier[1].loop();
   /*
   for (let i = 1; i < 4; ++i) {
     carrier[i].play();
@@ -52,8 +52,8 @@ function draw() {
   smooth();
   frameRate(40);
   timer = int(millis() - last);
-  /* vol = amp[3].getLevel();
-  for (let i = 1; i < 4; ++i) {
+
+  /* for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
     peakDetect[i].update(fft[i]);
   }

@@ -12,8 +12,8 @@ function pattern(w, h) {
           (i != 0 || j != -4) &&
           (i != 0 || j != 4) &&
           (i != 0 || j != 6) &&
-          (i != 0 || j != -6) &&
-          (i != 2 || j != 0) &&
+          (i != 0 || j != -6)
+          /*(i != 2 || j != 0) &&
           (i != 2 || j != 2) &&
           (i != 2 || j != -2) &&
           (i != 2 || j != -4) &&
@@ -38,7 +38,7 @@ function pattern(w, h) {
           (i != -4 || j != -4) &&
           (i != -4 || j != -2) &&
           (i != -6 || j != -2) &&
-          (i != -6 || j != -4)
+          (i != -6 || j != -4)*/
         ) {
           push();
           translate(width / 2 + i * w, height / 2 + j * h);
@@ -51,7 +51,7 @@ function pattern(w, h) {
       }
     } else {
       for (j = -15; j <= 15; j += 2) {
-        if (
+        /*  if (
           (i != 1 || j != 1) &&
           (i != 1 || j != -1) &&
           (i != 1 || j != 3) &&
@@ -84,19 +84,18 @@ function pattern(w, h) {
           (i != -5 || j != -3) &&
           (i != -5 || j != -5) &&
           (i != -5 || j != -1)
-        ) {
-          push();
-          translate(width / 2 + i * w, height / 2 + j * h);
-          if (n == 24) {
-            rotate(15);
-          }
-          polygon(0, 0, n);
-          pop();
+        ) {*/
+        push();
+        translate(width / 2 + i * w, height / 2 + j * h);
+        if (n == 24) {
+          rotate(15);
         }
+        polygon(0, 0, n);
+        pop();
       }
     }
   }
-
+  /*
   push();
   push();
   if (timer % 211 == 0) {
