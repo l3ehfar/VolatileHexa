@@ -119,15 +119,14 @@ function pattern(w, h) {
 
   push();
   push();
-  if (timer % 411 == 0) {
+  if (vol >= 0.045) {
     frameRate(30);
     z1 = random(120, 170);
     stroke(z1);
-    ang1 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
+    ang1 = random(-0, 0);
   } else {
     if (z1 >= 40) {
-      z1 = z1 * 0.99;
+      z1 = z1 * 0.98;
       stroke(z1);
     }
     ang1 = ang1 * 0.96;
@@ -140,10 +139,10 @@ function pattern(w, h) {
   polygon(0, 0, n);
   pop();
 
-  if (timer % 411 == 0) {
+  if (vol >= 0.045) {
     z2 = random(60, 100);
     stroke(z2);
-    ang2 = random(-20, 20);
+    ang2 = random(-0, 0);
   } else {
     if (z2 >= 40) {
       z2 = z2 * 0.992;
@@ -203,15 +202,14 @@ function pattern(w, h) {
 
   push();
   push();
-  if (timer % 419 == 0) {
+  if (vol >= 0.04 && vol <= 0.05) {
     frameRate(30);
     z4 = random(120, 170);
     stroke(z4);
-    ang3 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
+    ang3 = random(-0, 0);
   } else {
     if (z4 >= 40) {
-      z4 = z4 * 0.99;
+      z4 = z4 * 0.98;
       stroke(z4);
     }
     ang3 = ang3 * 0.96;
@@ -223,10 +221,10 @@ function pattern(w, h) {
   rotate(ang3);
   polygon(0, 0, n);
   pop();
-  if (timer % 419 == 0) {
+  if (vol >= 0.04 && vol <= 0.05) {
     z5 = random(60, 100);
     stroke(z5);
-    ang4 = random(-20, 20);
+    ang4 = random(-0, 0);
   } else {
     if (z5 >= 40) {
       z5 = z5 * 0.992;
@@ -286,15 +284,14 @@ function pattern(w, h) {
 
   push();
   push();
-  if (timer % 425 == 0) {
+  if (vol <= 0.035 && vol >= 0.025) {
     frameRate(30);
     z6 = random(120, 170);
     stroke(z6);
-    ang5 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
+    ang5 = random(-0, 0);
   } else {
     if (z6 >= 40) {
-      z6 = z6 * 0.99;
+      z6 = z6 * 0.98;
       stroke(z6);
     }
     ang5 = ang5 * 0.96;
@@ -306,10 +303,10 @@ function pattern(w, h) {
   rotate(ang5);
   polygon(0, 0, n);
   pop();
-  if (timer % 425 == 0) {
+  if (vol <= 0.035 && vol >= 0.025) {
     z7 = random(60, 100);
     stroke(z7);
-    ang6 = random(-20, 20);
+    ang6 = random(-0, 0);
   } else {
     if (z7 >= 40) {
       z7 = z7 * 0.992;
@@ -369,15 +366,14 @@ function pattern(w, h) {
 
   push();
   push();
-  if (timer % 431 == 0) {
+  if (vol <= 0.04 && vol >= 0.03) {
     frameRate(30);
     z8 = random(120, 170);
     stroke(z8);
-    ang7 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
+    ang7 = random(-0, 0);
   } else {
     if (z8 >= 40) {
-      z8 = z8 * 0.99;
+      z8 = z8 * 0.98;
       stroke(z8);
     }
     ang7 = ang7 * 0.96;
@@ -389,10 +385,10 @@ function pattern(w, h) {
   rotate(ang7);
   polygon(0, 0, n);
   pop();
-  if (timer % 431 == 0) {
+  if (vol <= 0.04 && vol >= 0.03) {
     z9 = random(60, 100);
     stroke(z9);
-    ang8 = random(-20, 20);
+    ang8 = random(-0, 0);
   } else {
     if (z9 >= 40) {
       z9 = z9 * 0.992;
@@ -456,7 +452,7 @@ function pattern(w, h) {
     frameRate(30);
     z18 = random(60, 70);
     stroke(z18);
-    ang9 = random(-40, 40);
+    ang9 = random(-0, 0);
   } else {
     if (z18 >= 13) {
       z18 = z18 * 0.995;
@@ -538,7 +534,7 @@ function pattern(w, h) {
     frameRate(30);
     z20 = random(40, 50);
     stroke(z20);
-    ang11 = random(-40, 40);
+    ang11 = random(-0, 0);
   } else {
     if (z20 >= 13) {
       z20 = z20 * 0.995;

@@ -4,6 +4,7 @@ var carrier = [];
 var amp = [];
 var fft = [];
 var peakDetect = [];
+let mic;
 var vol;
 var itsOn;
 var c = 1;
@@ -27,15 +28,13 @@ var ang1 = 0.0,
   ang6 = 0.0,
   ang7 = 0.0,
   ang8 = 0.0;
-function preload() {
-  for (let i = 1; i < 9; ++i) {
-    carrier[i] = loadSound(i + EXT);
-  }
-}
+var vol;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  carrier[1].loop();
+  mic = new p5.AudioIn();
+  mic.start();
   /*
   for (let i = 1; i < 4; ++i) {
     carrier[i].play();
@@ -52,7 +51,8 @@ function draw() {
   smooth();
   frameRate(40);
   timer = int(millis() - last);
-  /* vol = amp[3].getLevel();
+  vol = mic.getLevel();
+  /*
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
     peakDetect[i].update(fft[i]);
