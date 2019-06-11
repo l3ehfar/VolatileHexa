@@ -288,9 +288,11 @@ function pattern(w, h) {
     }
     noteColor = 140;
     noteColor2 = 100;
-    noteRotate = random(-200, 200);
-    noteRotate2 = random(-100, 100);
-    noteRotate3 = random(-60, 60);
+    if (timer % 417 == 0 || timer % 427 == 0 || timer % 411 == 0) {
+      noteRotate = random(-150, 150);
+      noteRotate2 = random(-90, 90);
+      noteRotate3 = random(-50, 50);
+    }
     carrier[int(random(2, 9))].play();
   } else {
     noteRotate = noteRotate * 0.97;
