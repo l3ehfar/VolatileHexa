@@ -1,617 +1,362 @@
 function pattern(w, h) {
+  if (timer >= 25000.0 && timer <= 27000.0) {
+    step1 = map(timer, 25000.0, 27000.0, 160, 250);
+    step2 = map(timer, 25000.0, 27000.0, 100, 160);
+    step3 = map(timer, 25000.0, 27000.0, 65, 100);
+    step4 = map(timer, 25000.0, 27000.0, 40, 65);
+  } else if (timer >= 27000.0 && timer <= 29000.0) {
+    step1 = map(timer, 27000.0, 29000.0, 250, 160);
+    step2 = map(timer, 27000.0, 29000.0, 160, 100);
+    step3 = map(timer, 27000.0, 29000.0, 100, 65);
+    step4 = map(timer, 27000.0, 29000.0, 65, 40);
+  } else if (timer >= 32500.0 && timer <= 35000.0) {
+    step1 = map(timer, 32500.0, 35000.0, 160, 250);
+    step2 = map(timer, 32500.0, 35000.0, 100, 160);
+    step3 = map(timer, 32500.0, 35000.0, 65, 100);
+    step4 = map(timer, 32500.0, 35000.0, 40, 65);
+  } else if (timer >= 35000.0 && timer <= 36000.0) {
+    step1 = map(timer, 35000.0, 36000.0, 250, 160);
+    step2 = map(timer, 35000.0, 36000.0, 160, 100);
+    step3 = map(timer, 35000.0, 36000.0, 100, 65);
+    step4 = map(timer, 35000.0, 36000.0, 65, 40);
+  }
+
+  if (timer >= 49000.0 && timer <= 50500.0) {
+    step1 = map(timer, 49000.0, 50500.0, 160, 250);
+    step2 = map(timer, 49000.0, 50500.0, 100, 160);
+    step3 = map(timer, 49000.0, 50500.0, 65, 100);
+    step4 = map(timer, 49000.0, 50500.0, 40, 65);
+  } else if (timer >= 50500.0 && timer <= 51000.0) {
+    step1 = 250;
+    step2 = 160;
+    step3 = 100;
+    step4 = 65;
+  } else if (timer >= 51000.0 && timer <= 52000.0) {
+    step1 = map(timer, 51000.0, 52000.0, 250, 160);
+    step2 = map(timer, 51000.0, 52000.0, 160, 100);
+    step3 = map(timer, 51000.0, 52000.0, 100, 65);
+    step4 = map(timer, 51000.0, 52000.0, 65, 40);
+  } else if (timer >= 59000.0 && timer <= 60500.0) {
+    step1 = map(timer, 59000.0, 60500.0, 160, 250);
+    step2 = map(timer, 59000.0, 60500.0, 100, 160);
+    step3 = map(timer, 59000.0, 60500.0, 65, 100);
+    step4 = map(timer, 59000.0, 60500.0, 40, 65);
+  } else if (timer >= 60500.0 && timer <= 61000.0) {
+    step1 = 250;
+    step2 = 160;
+    step3 = 100;
+    step4 = 65;
+  } else if (timer >= 61000.0 && timer <= 62000.0) {
+    step1 = map(timer, 61000.0, 62000.0, 250, 160);
+    step2 = map(timer, 61000.0, 62000.0, 160, 100);
+    step3 = map(timer, 61000.0, 62000.0, 100, 65);
+    step4 = map(timer, 61000.0, 62000.0, 65, 40);
+  } else if (timer >= 69000.0 && timer <= 70500.0) {
+    step1 = map(timer, 69000.0, 70500.0, 160, 250);
+    step2 = map(timer, 69000.0, 70500.0, 100, 160);
+    step3 = map(timer, 69000.0, 70500.0, 65, 100);
+    step4 = map(timer, 69000.0, 70500.0, 40, 65);
+  } else if (timer >= 70500.0 && timer <= 71000.0) {
+    step1 = 250;
+    step2 = 160;
+    step3 = 100;
+    step4 = 65;
+  } else if (timer >= 71000.0 && timer <= 72000.0) {
+    step1 = map(timer, 71000.0, 72000.0, 250, 160);
+    step2 = map(timer, 71000.0, 72000.0, 160, 100);
+    step3 = map(timer, 71000.0, 72000.0, 100, 65);
+    step4 = map(timer, 71000.0, 72000.0, 65, 40);
+  }
+
+  if (timer >= 83000.0 && timer <= 85000.0) {
+    step1 = map(timer, 83000.0, 85000.0, 160, 250);
+    step2 = map(timer, 83000.0, 85000.0, 100, 160);
+    step3 = map(timer, 83000.0, 85000.0, 65, 100);
+    step4 = map(timer, 83000.0, 85000.0, 40, 65);
+  } else if (timer >= 85000.0 && timer <= 85500.0) {
+    step1 = 250;
+    step2 = 160;
+    step3 = 100;
+    step4 = 65;
+  } else if (timer >= 85500.0 && timer <= 87000.0) {
+    step1 = map(timer, 85500.0, 87000.0, 250, 160);
+    step2 = map(timer, 85500.0, 87000.0, 160, 100);
+    step3 = map(timer, 85500.0, 87000.0, 100, 65);
+    step4 = map(timer, 85500.0, 87000.0, 65, 40);
+  } else if (timer >= 104000.0 && timer <= 106000.0) {
+    step1 = map(timer, 104000.0, 106000.0, 160, 250);
+    step2 = map(timer, 104000.0, 106000.0, 100, 160);
+    step3 = map(timer, 104000.0, 106000.0, 65, 100);
+    step4 = map(timer, 104000.0, 106000.0, 40, 65);
+  } else if (timer >= 106000.0 && timer <= 106500.0) {
+    step1 = 250;
+    step2 = 160;
+    step3 = 100;
+    step4 = 65;
+  } else if (timer >= 106500.0 && timer <= 108000.0) {
+    step1 = map(timer, 106500.0, 108000.0, 250, 160);
+    step2 = map(timer, 106500.0, 108000.0, 160, 100);
+    step3 = map(timer, 106500.0, 108000.0, 100, 65);
+    step4 = map(timer, 106500.0, 108000.0, 65, 40);
+  }
+
   for (var i = -10; i <= 10; i++) {
     if (i % 2 == 0) {
       for (j = -16; j <= 16; j += 2) {
-        if (
-          (i != 4 || j != -4) &&
-          (i != 4 || j != -2) &&
-          (i != 6 || j != -2) &&
-          (i != 6 || j != -4) &&
-          (i != -4 || j != 4) &&
-          (i != -4 || j != 2) &&
-          (i != -6 || j != 2) &&
-          (i != -6 || j != 4) &&
-          (i != 4 || j != 4) &&
-          (i != 4 || j != 2) &&
-          (i != 6 || j != 2) &&
-          (i != 6 || j != 4) &&
-          (i != -4 || j != -4) &&
-          (i != -4 || j != -2) &&
-          (i != -6 || j != -2) &&
-          (i != -6 || j != -4)
+        if (i == 0 && j == 0) {
+          stroke(step1);
+        } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
+          stroke(step1);
+        } else if (
+          (i == -2 && j == 0) ||
+          (i == +2 && j == 0) ||
+          (i == -2 && j == 2) ||
+          (i == +2 && j == 2) ||
+          (i == -2 && j == -2) ||
+          (i == +2 && j == -2) ||
+          (i == 0 && j == -4) ||
+          (i == 0 && j == +4)
         ) {
-          if (i == 0 && j == 0) {
-            stroke(255);
-          } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
-            stroke(160);
-          } else if (
-            (i == -2 && j == 0) ||
-            (i == +2 && j == 0) ||
-            (i == -2 && j == 2) ||
-            (i == +2 && j == 2) ||
-            (i == -2 && j == -2) ||
-            (i == +2 && j == -2) ||
-            (i == 0 && j == -4) ||
-            (i == 0 && j == +4)
-          ) {
-            stroke(100);
-          } else if (
-            (i == -2 && j == 4) ||
-            (i == +2 && j == 4) ||
-            (i == -2 && j == -4) ||
-            (i == +2 && j == -4) ||
-            (i == 0 && j == -6) ||
-            (i == 0 && j == 6)
-          ) {
-            stroke(65);
-          } else {
-            stroke(40);
-          }
-
-          push();
-          translate(width / 2 + i * w, height / 2 + j * h);
-          if (n == 24) {
-            rotate(15);
-          }
-          polygon(0, 0, n);
-          pop();
+          stroke(step2);
+        } else if (
+          (i == -2 && j == 4) ||
+          (i == +2 && j == 4) ||
+          (i == -2 && j == -4) ||
+          (i == +2 && j == -4) ||
+          (i == 0 && j == -6) ||
+          (i == 0 && j == 6)
+        ) {
+          stroke(step3);
+        } else if (
+          (i == -2 && j == 6) ||
+          (i == +2 && j == 6) ||
+          (i == -2 && j == -6) ||
+          (i == +2 && j == -6) ||
+          (i == 0 && j == -8) ||
+          (i == 0 && j == 8) ||
+          (i == -4 && j == 2) ||
+          (i == +4 && j == 2) ||
+          (i == -4 && j == -2) ||
+          (i == +4 && j == -2) ||
+          (i == -4 && j == -4) ||
+          (i == +4 && j == -4) ||
+          (i == -4 && j == 4) ||
+          (i == +4 && j == 4) ||
+          (i == -4 && j == 0) ||
+          (i == +4 && j == 0)
+        ) {
+          stroke(step4);
+        } else {
+          stroke(40);
         }
+
+        push();
+        translate(width / 2 + i * w, height / 2 + j * h);
+        if (n == 24) {
+          rotate(15);
+        }
+        if (i == 0 && j == 0) {
+          rotate(noteRotate);
+        } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
+          rotate(noteRotate);
+        } else if (
+          (i == -2 && j == 0) ||
+          (i == +2 && j == 0) ||
+          (i == -2 && j == 2) ||
+          (i == +2 && j == 2) ||
+          (i == -2 && j == -2) ||
+          (i == +2 && j == -2) ||
+          (i == 0 && j == -4) ||
+          (i == 0 && j == +4)
+        ) {
+          rotate(noteRotate2);
+        } else if (
+          (i == -2 && j == 4) ||
+          (i == +2 && j == 4) ||
+          (i == -2 && j == -4) ||
+          (i == +2 && j == -4) ||
+          (i == 0 && j == -6) ||
+          (i == 0 && j == 6)
+        ) {
+          rotate(noteRotate3);
+        } else {
+          rotate(0);
+        }
+
+        polygon(0, 0, n);
+        pop();
       }
     } else {
       for (j = -15; j <= 15; j += 2) {
         if (
-          (i != 5 || j != -3) &&
-          (i != -5 || j != 3) &&
-          (i != 5 || j != -1) &&
-          (i != 5 || j != -5) &&
-          (i != -5 || j != 1) &&
-          (i != -5 || j != 5) &&
-          (i != 5 || j != 3) &&
-          (i != 5 || j != 5) &&
-          (i != 5 || j != 1) &&
-          (i != -5 || j != -3) &&
-          (i != -5 || j != -5) &&
-          (i != -5 || j != -1)
+          (i == 1 && j == 1) ||
+          (i == 1 && j == -1) ||
+          (i == -1 && j == 1) ||
+          (i == -1 && j == -1)
         ) {
-          if (
-            (i == 1 && j == 1) ||
-            (i == 1 && j == -1) ||
-            (i == -1 && j == 1) ||
-            (i == -1 && j == -1)
-          ) {
-            stroke(160);
-          } else if (
-            (i == 1 && j == 3) ||
-            (i == 1 && j == -3) ||
-            (i == -1 && j == 3) ||
-            (i == -1 && j == -3)
-          ) {
-            stroke(100);
-          } else if (
-            (i == 3 && j == 1) ||
-            (i == 3 && j == -1) ||
-            (i == 3 && j == 3) ||
-            (i == 3 && j == -3) ||
-            (i == -3 && j == 1) ||
-            (i == -3 && j == -1) ||
-            (i == -3 && j == 3) ||
-            (i == -3 && j == -3) ||
-            (i == 1 && j == 5) ||
-            (i == 1 && j == -5) ||
-            (i == -1 && j == 5) ||
-            (i == -1 && j == -5)
-          ) {
-            stroke(65);
-          } else {
-            stroke(40);
-          }
-          push();
-          translate(width / 2 + i * w, height / 2 + j * h);
-          if (n == 24) {
-            rotate(15);
-          }
-          polygon(0, 0, n);
-          pop();
+          stroke(step1);
+        } else if (
+          (i == 1 && j == 3) ||
+          (i == 1 && j == -3) ||
+          (i == -1 && j == 3) ||
+          (i == -1 && j == -3)
+        ) {
+          stroke(step2);
+        } else if (
+          (i == 3 && j == 1) ||
+          (i == 3 && j == -1) ||
+          (i == 3 && j == 3) ||
+          (i == 3 && j == -3) ||
+          (i == -3 && j == 1) ||
+          (i == -3 && j == -1) ||
+          (i == -3 && j == 3) ||
+          (i == -3 && j == -3) ||
+          (i == 1 && j == 5) ||
+          (i == 1 && j == -5) ||
+          (i == -1 && j == 5) ||
+          (i == -1 && j == -5)
+        ) {
+          stroke(step3);
+        } else if (
+          (i == 3 && j == -5) ||
+          (i == -3 && j == 5) ||
+          (i == -3 && j == -5) ||
+          (i == 3 && j == 5) ||
+          (i == 1 && j == 7) ||
+          (i == 1 && j == -7) ||
+          (i == -1 && j == 7) ||
+          (i == -1 && j == -7)
+        ) {
+          stroke(step4);
+        } else {
+          stroke(40);
         }
+        push();
+        translate(width / 2 + i * w, height / 2 + j * h);
+        if (n == 24) {
+          rotate(15);
+        }
+        if (
+          (i == 1 && j == 1) ||
+          (i == 1 && j == -1) ||
+          (i == -1 && j == 1) ||
+          (i == -1 && j == -1)
+        ) {
+          rotate(noteRotate);
+        } else if (
+          (i == 1 && j == 3) ||
+          (i == 1 && j == -3) ||
+          (i == -1 && j == 3) ||
+          (i == -1 && j == -3)
+        ) {
+          rotate(noteRotate2);
+        } else if (
+          (i == 3 && j == 1) ||
+          (i == 3 && j == -1) ||
+          (i == 3 && j == 3) ||
+          (i == 3 && j == -3) ||
+          (i == -3 && j == 1) ||
+          (i == -3 && j == -1) ||
+          (i == -3 && j == 3) ||
+          (i == -3 && j == -3) ||
+          (i == 1 && j == 5) ||
+          (i == 1 && j == -5) ||
+          (i == -1 && j == 5) ||
+          (i == -1 && j == -5)
+        ) {
+          rotate(noteRotate3);
+        } else {
+          rotate(0);
+        }
+        polygon(0, 0, n);
+        pop();
       }
     }
   }
-
-  push();
-  push();
-  if (timer % 411 == 0) {
+  if (
+    timer % 411 == 0 ||
+    timer % 417 == 0 ||
+    timer % 421 == 0 ||
+    timer % 427 == 0
+  ) {
     frameRate(30);
-    z1 = random(120, 170);
-    stroke(z1);
-    ang1 = random(-40, 40);
+    note_i = int(random([-5, 5, 6, -6, 7, -7]));
+    if (note_i % 2 == 0) {
+      note_j = int(random(-4, 4)) * 2;
+    } else {
+      note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
+    }
+    noteColor = 140;
+    noteColor2 = 100;
+    noteRotate = random(-200, 200);
+    noteRotate2 = random(-100, 100);
+    noteRotate3 = random(-60, 60);
     carrier[int(random(2, 9))].play();
   } else {
-    if (z1 >= 40) {
-      z1 = z1 * 0.98;
-      stroke(z1);
+    noteRotate = noteRotate * 0.97;
+    noteRotate2 = noteRotate2 * 0.97;
+    noteRotate3 = noteRotate3 * 0.97;
+    if (noteColor >= 40) {
+      noteColor = noteColor * 0.989;
     }
-    ang1 = ang1 * 0.96;
+    if (noteColor2 >= 40) {
+      noteColor2 = noteColor2 * 0.99;
+    }
   }
-  translate(width / 2 + 5 * w, height / 2 - 3 * h);
+  stroke(noteColor);
+  push();
+  translate(width / 2 + note_i * w, height / 2 + note_j * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang1);
+  polygon(0, 0, n);
+  pop();
+  stroke(noteColor2);
+  push();
+  translate(width / 2 + note_i * w, height / 2 + (note_j + 2) * h);
+  if (n == 24) {
+    rotate(15);
+  }
   polygon(0, 0, n);
   pop();
 
-  if (timer % 411 == 0) {
-    z2 = random(60, 100);
-    stroke(z2);
-    ang2 = random(-20, 20);
-  } else {
-    if (z2 >= 40) {
-      z2 = z2 * 0.992;
-      stroke(z2);
-    }
-    ang2 = ang2 * 0.91;
-  }
   push();
-  translate(width / 2 + 4 * w, height / 2 - 2 * h);
+  translate(width / 2 + note_i * w, height / 2 + (note_j - 2) * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang2);
   polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 4 * w, height / 2 - 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang2);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 6 * w, height / 2 - 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang2);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 6 * w, height / 2 - 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang2);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 5 * w, height / 2 - 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang2);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 5 * w, height / 2 - 1 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang2);
-  polygon(0, 0, n);
-  pop();
   pop();
 
   push();
-  push();
-  if (timer % 419 == 0) {
-    frameRate(30);
-    z4 = random(120, 170);
-    stroke(z4);
-    ang3 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
-  } else {
-    if (z4 >= 40) {
-      z4 = z4 * 0.98;
-      stroke(z4);
-    }
-    ang3 = ang3 * 0.96;
-  }
-  translate(width / 2 - 5 * w, height / 2 + 3 * h);
+  translate(width / 2 + (note_i - 1) * w, height / 2 + (note_j - 1) * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang3);
   polygon(0, 0, n);
-  pop();
-  if (timer % 419 == 0) {
-    z5 = random(60, 100);
-    stroke(z5);
-    ang4 = random(-20, 20);
-  } else {
-    if (z5 >= 40) {
-      z5 = z5 * 0.992;
-      stroke(z5);
-    }
-    ang4 = ang4 * 0.91;
-  }
-  push();
-  translate(width / 2 - 4 * w, height / 2 + 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 4 * w, height / 2 + 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 6 * w, height / 2 + 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 6 * w, height / 2 + 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 5 * w, height / 2 + 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 5 * w, height / 2 + 1 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang4);
-  polygon(0, 0, n);
-  pop();
   pop();
 
   push();
-  push();
-  if (timer % 425 == 0) {
-    frameRate(30);
-    z6 = random(120, 170);
-    stroke(z6);
-    ang5 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
-  } else {
-    if (z6 >= 40) {
-      z6 = z6 * 0.98;
-      stroke(z6);
-    }
-    ang5 = ang5 * 0.96;
-  }
-  translate(width / 2 + 5 * w, height / 2 + 3 * h);
+  translate(width / 2 + (note_i - 1) * w, height / 2 + (note_j + 1) * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang5);
   polygon(0, 0, n);
-  pop();
-  if (timer % 425 == 0) {
-    z7 = random(60, 100);
-    stroke(z7);
-    ang6 = random(-20, 20);
-  } else {
-    if (z7 >= 40) {
-      z7 = z7 * 0.992;
-      stroke(z7);
-    }
-    ang6 = ang6 * 0.91;
-  }
-  push();
-  translate(width / 2 + 6 * w, height / 2 + 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 6 * w, height / 2 + 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 4 * w, height / 2 + 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 4 * w, height / 2 + 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 5 * w, height / 2 + 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 5 * w, height / 2 + 1 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang6);
-  polygon(0, 0, n);
-  pop();
   pop();
 
   push();
-  push();
-  if (timer % 431 == 0) {
-    frameRate(30);
-    z8 = random(120, 170);
-    stroke(z8);
-    ang7 = random(-40, 40);
-    carrier[int(random(2, 9))].play();
-  } else {
-    if (z8 >= 40) {
-      z8 = z8 * 0.98;
-      stroke(z8);
-    }
-    ang7 = ang7 * 0.96;
-  }
-  translate(width / 2 - 5 * w, height / 2 - 3 * h);
+  translate(width / 2 + (note_i + 1) * w, height / 2 + (note_j - 1) * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang7);
   polygon(0, 0, n);
-  pop();
-  if (timer % 431 == 0) {
-    z9 = random(60, 100);
-    stroke(z9);
-    ang8 = random(-20, 20);
-  } else {
-    if (z9 >= 40) {
-      z9 = z9 * 0.992;
-      stroke(z9);
-    }
-    ang8 = ang8 * 0.91;
-  }
-  push();
-  translate(width / 2 - 6 * w, height / 2 - 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 6 * w, height / 2 - 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 4 * w, height / 2 - 2 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 4 * w, height / 2 - 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 5 * w, height / 2 - 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 5 * w, height / 2 - 1 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang8);
-  polygon(0, 0, n);
-  pop();
-  pop();
-  /*
-  push();
-  push();
-  if (z2 >= 25.8 && z2 <= 25.9) {
-    frameRate(30);
-    z18 = random(60, 70);
-    stroke(z18);
-    ang9 = random(-40, 40);
-  } else {
-    if (z18 >= 13) {
-      z18 = z18 * 0.995;
-      stroke(z18);
-    }
-    ang9 = ang9 * 0.96;
-  }
-  translate(width / 2 - 0 * w, height / 2 - 6 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang9);
-  polygon(0, 0, n);
-  pop();
-  if (z2 >= 25.8 && z2 <= 25.9) {
-    z19 = random(60, 70);
-    stroke(z19);
-    ang10 = random(-20 ,20);
-  } else {
-    if (z19 >= 13) {
-      z19 = z19 * 0.995;
-      stroke(z19);
-    }
-    ang10 = ang10 * 0.91;
-  }
-  push();
-  translate(width / 2 - 1 * w, height / 2 - 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 1 * w, height / 2 - 7 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 1 * w, height / 2 - 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 1 * w, height / 2 - 7 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 0 * w, height / 2 - 8 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 0 * w, height / 2 - 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang10);
-  polygon(0, 0, n);
-  pop();
   pop();
 
   push();
-  push();
-  if (z4 >= 25.8 && z4 <= 25.9) {
-    frameRate(30);
-    z20 = random(40, 50);
-    stroke(z20);
-    ang11 = random(-40, 40);
-  } else {
-    if (z20 >= 13) {
-      z20 = z20 * 0.995;
-      stroke(z20);
-    }
-    ang11 = ang11 * 0.96;
-  }
-  translate(width / 2 - 0 * w, height / 2 + 6 * h);
+  translate(width / 2 + (note_i + 1) * w, height / 2 + (note_j + 1) * h);
   if (n == 24) {
     rotate(15);
   }
-  rotate(ang11);
   polygon(0, 0, n);
   pop();
-  if (z4 >= 25.8 && z4 <= 25.9) {
-    z21 = random(40, 50);
-    stroke(z21);
-    ang12 = random(-20 ,20);
-  } else {
-    if (z21 >= 13) {
-      z21 = z21 * 0.995;
-      stroke(z21);
-    }
-    ang12 = ang12 * 0.91;
-  }
-  push();
-  translate(width / 2 - 1 * w, height / 2 + 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 1 * w, height / 2 + 7 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 1 * w, height / 2 + 5 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 + 1 * w, height / 2 + 7 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 0 * w, height / 2 + 8 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  push();
-  translate(width / 2 - 0 * w, height / 2 + 4 * h);
-  if (n == 24) {
-    rotate(15);
-  }
-  rotate(ang12);
-  polygon(0, 0, n);
-  pop();
-  pop();
-  */
 }

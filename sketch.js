@@ -10,23 +10,18 @@ var c = 1;
 var timer;
 var last = 0;
 EXT = ".mp3";
-var z3 = 10,
-  z1 = 0,
-  z2 = 0,
-  z4 = 0,
-  z5 = 0,
-  z6 = 0,
-  z7 = 0,
-  z8 = 0,
-  z9 = 0;
-var ang1 = 0.0,
-  ang2 = 0.0,
-  ang3 = 0.0,
-  ang4 = 0.0,
-  ang5 = 0.0,
-  ang6 = 0.0,
-  ang7 = 0.0,
-  ang8 = 0.0;
+var step1 = 160;
+var step2 = 100;
+var step3 = 65;
+var step4 = 40;
+var note_i = -10,
+  note_j = -10;
+var noteColor = 100.0,
+  noteColor2 = 100.0,
+  noteColor3 = 65;
+var noteRotate = 0.0,
+  noteRotate2 = 0.0,
+  noteRotate3 = 0.0;
 function preload() {
   for (let i = 1; i < 9; ++i) {
     carrier[i] = loadSound(i + EXT);
@@ -70,8 +65,8 @@ function touchStarted() {
 }
 
 function autoTransition() {
-  if (timer >= 1000.0 && timer <= 20000.0) {
-    n = map(timer, 1000.0, 20000.0, 6, 12);
+  if (timer >= 0.0 && timer <= 20000.0) {
+    n = map(timer, 0.0, 20000.0, 6, 12);
   } else if (timer >= 20000 && timer <= 35000) {
     n = 12;
   } else if (timer >= 35000.0 && timer <= 37000.0) {
