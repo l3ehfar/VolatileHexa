@@ -127,7 +127,7 @@ function pattern(w, h) {
     carrier[int(random(2, 9))].play();
   } else {
     if (z1 >= 40) {
-      z1 = z1 * 0.99;
+      z1 = z1 * 0.98;
       stroke(z1);
     }
     ang1 = ang1 * 0.96;
@@ -211,7 +211,7 @@ function pattern(w, h) {
     carrier[int(random(2, 9))].play();
   } else {
     if (z4 >= 40) {
-      z4 = z4 * 0.99;
+      z4 = z4 * 0.98;
       stroke(z4);
     }
     ang3 = ang3 * 0.96;
@@ -294,7 +294,7 @@ function pattern(w, h) {
     carrier[int(random(2, 9))].play();
   } else {
     if (z6 >= 40) {
-      z6 = z6 * 0.99;
+      z6 = z6 * 0.98;
       stroke(z6);
     }
     ang5 = ang5 * 0.96;
@@ -377,7 +377,7 @@ function pattern(w, h) {
     carrier[int(random(2, 9))].play();
   } else {
     if (z8 >= 40) {
-      z8 = z8 * 0.99;
+      z8 = z8 * 0.98;
       stroke(z8);
     }
     ang7 = ang7 * 0.96;
