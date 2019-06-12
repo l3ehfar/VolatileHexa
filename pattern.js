@@ -288,7 +288,7 @@ function pattern(w, h) {
     }
     noteColor = 140;
     noteColor2 = 100;
-    if (timer % 417 == 0 || timer % 427 == 0 || timer % 411 == 0) {
+    if (timer % 417 == 0 || timer % 427 == 0) {
       noteRotate = random(-150, 150);
       noteRotate2 = random(-90, 90);
       noteRotate3 = random(-50, 50);
