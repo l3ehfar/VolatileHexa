@@ -59,6 +59,7 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }*/
+  console.log(vol);
   autoTransition();
   mainShow(n);
 }
