@@ -213,7 +213,7 @@ function pattern(w, h) {
     }
   }
 
-  if (vol >= 0.07 && vol <= 0.1) {
+  if (vol >= 0.8 && vol <= 1) {
     frameRate(30);
     note_i = int(random([-7, 5, 7, -5, 6, -6]));
     if (note_i % 2 == 0) {
