@@ -49,7 +49,7 @@ function draw() {
   frameRate(40);
   timer = int(millis() - last);
   vol = mic.getLevel();
-  console.log(vol);  /* vol = amp[3].getLevel();
+   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
     peakDetect[i].update(fft[i]);
