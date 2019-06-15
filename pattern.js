@@ -1,4 +1,5 @@
 function pattern(w, h) {
+  console.log(vol);
   if (timer >= 25000.0 && timer <= 27000.0) {
     step1 = map(timer, 25000.0, 27000.0, 160, 250);
     step2 = map(timer, 25000.0, 27000.0, 100, 160);
@@ -213,7 +214,7 @@ function pattern(w, h) {
     }
   }
 
-  if (vol >= 0.8 && vol <= 1) {
+  if (vol >= 10 && vol <= 15) {
     frameRate(30);
     note_i = int(random([-7, 5, 7, -5, 6, -6]));
     if (note_i % 2 == 0) {
