@@ -99,7 +99,6 @@ function pattern(w, h) {
     step3 = map(timer, 106500.0, 108000.0, 100, 65);
     step4 = map(timer, 106500.0, 108000.0, 65, 40);
   }
-
   for (var i = -10; i <= 10; i++) {
     if (i % 2 == 0) {
       for (j = -16; j <= 16; j += 2) {
@@ -155,34 +154,6 @@ function pattern(w, h) {
         if (n == 24) {
           rotate(15);
         }
-        if (i == 0 && j == 0) {
-          rotate(noteRotate);
-        } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
-          rotate(noteRotate);
-        } else if (
-          (i == -2 && j == 0) ||
-          (i == +2 && j == 0) ||
-          (i == -2 && j == 2) ||
-          (i == +2 && j == 2) ||
-          (i == -2 && j == -2) ||
-          (i == +2 && j == -2) ||
-          (i == 0 && j == -4) ||
-          (i == 0 && j == +4)
-        ) {
-          rotate(noteRotate2);
-        } else if (
-          (i == -2 && j == 4) ||
-          (i == +2 && j == 4) ||
-          (i == -2 && j == -4) ||
-          (i == +2 && j == -4) ||
-          (i == 0 && j == -6) ||
-          (i == 0 && j == 6)
-        ) {
-          rotate(noteRotate3);
-        } else {
-          rotate(0);
-        }
-
         polygon(0, 0, n);
         pop();
       }
@@ -236,73 +207,37 @@ function pattern(w, h) {
         if (n == 24) {
           rotate(15);
         }
-        if (
-          (i == 1 && j == 1) ||
-          (i == 1 && j == -1) ||
-          (i == -1 && j == 1) ||
-          (i == -1 && j == -1)
-        ) {
-          rotate(noteRotate);
-        } else if (
-          (i == 1 && j == 3) ||
-          (i == 1 && j == -3) ||
-          (i == -1 && j == 3) ||
-          (i == -1 && j == -3)
-        ) {
-          rotate(noteRotate2);
-        } else if (
-          (i == 3 && j == 1) ||
-          (i == 3 && j == -1) ||
-          (i == 3 && j == 3) ||
-          (i == 3 && j == -3) ||
-          (i == -3 && j == 1) ||
-          (i == -3 && j == -1) ||
-          (i == -3 && j == 3) ||
-          (i == -3 && j == -3) ||
-          (i == 1 && j == 5) ||
-          (i == 1 && j == -5) ||
-          (i == -1 && j == 5) ||
-          (i == -1 && j == -5)
-        ) {
-          rotate(noteRotate3);
-        } else {
-          rotate(0);
-        }
         polygon(0, 0, n);
         pop();
       }
     }
   }
-  if (
-    timer % 411 == 0 ||
-    timer % 417 == 0 ||
-    timer % 421 == 0 ||
-    timer % 427 == 0
-  ) {
+
+  if (vol >= 0.03 && vol <= 0.07) {
     frameRate(30);
-    note_i = int(random([-5, 5, 6, -6, 7, -7]));
+    note_i = int(random([-7, 5, 7, -5, 6, -6]));
     if (note_i % 2 == 0) {
       note_j = int(random(-4, 4)) * 2;
     } else {
       note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
     }
-    noteColor = 140;
-    noteColor2 = 100;
-    if (timer % 417 == 0 || timer % 427 == 0) {
-      noteRotate = random(-150, 150);
-      noteRotate2 = random(-90, 90);
-      noteRotate3 = random(-50, 50);
-    }
     carrier[int(random(2, 9))].play();
+    frames = this.frameCount;
+    noteColor = 40;
+    noteColor2 = 40;
+    hit = false;
+  } else if (hit == false) {
+    noteColor = noteColor * 1.055;
+    noteColor2 = noteColor2 * 1.04;
+    if (noteColor >= 159) {
+      hit = true;
+    }
   } else {
-    noteRotate = noteRotate * 0.97;
-    noteRotate2 = noteRotate2 * 0.97;
-    noteRotate3 = noteRotate3 * 0.97;
     if (noteColor >= 40) {
-      noteColor = noteColor * 0.989;
+      noteColor *= 0.983;
     }
     if (noteColor2 >= 40) {
-      noteColor2 = noteColor2 * 0.99;
+      noteColor2 *= 0.983;
     }
   }
   stroke(noteColor);

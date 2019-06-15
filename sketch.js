@@ -16,12 +16,11 @@ var step3 = 65;
 var step4 = 40;
 var note_i = -10,
   note_j = -10;
-var noteColor = 100.0,
-  noteColor2 = 100.0,
-  noteColor3 = 65;
-var noteRotate = 0.0,
-  noteRotate2 = 0.0,
-  noteRotate3 = 0.0;
+var noteColor = 40.0,
+  noteColor2 = 100.0;
+let mic;
+var hit = false;
+var frames;
 function preload() {
   for (let i = 1; i < 9; ++i) {
     carrier[i] = loadSound(i + EXT);
@@ -41,12 +40,15 @@ function setup() {
     peakDetect[i] = new p5.PeakDetect(4000, 12000, 0.08);
   }
   */
+  mic = new p5.AudioIn();
+
+  mic.start();
 }
 function draw() {
   background(26);
-  smooth();
   frameRate(40);
   timer = int(millis() - last);
+  vol = mic.getLevel();
   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();

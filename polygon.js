@@ -97,8 +97,10 @@ function polygon(x, y, npoints) {
     } else {
       radius = 100;
     }
+
     let sx = x + cos(a) * radius;
     let sy = y + sin(a) * radius;
+
     vertex(sx, sy);
   }
   endShape(CLOSE);
