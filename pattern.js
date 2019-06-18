@@ -212,16 +212,14 @@ function pattern(w, h) {
       }
     }
   }
-
-  if (vol >= 0.03 && vol <= 0.07) {
+  push();
+  if (vol >= 0.05) {
     frameRate(30);
-    note_i = int(random([-7, 5, 7, -5, 6, -6]));
-    if (note_i % 2 == 0) {
-      note_j = int(random(-4, 4)) * 2;
-    } else {
-      note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
-    }
-    carrier[int(random(2, 9))].play();
+    note_i = int(random([5, 7]));
+
+    note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
+
+    carrier[int(random(61, 87))].play();
     frames = this.frameCount;
     noteColor = 40;
     noteColor2 = 40;
@@ -295,5 +293,174 @@ function pattern(w, h) {
     rotate(15);
   }
   polygon(0, 0, n);
+  pop();
+  pop();
+  /*--------------------number2------------------------*/
+  push();
+  if (vol >= 0.04 && vol <= 0.05) {
+    frameRate(30);
+    note_i_2 = int(random([-7, -5]));
+
+    note_j_2 = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
+
+    carrier[int(random(2, 31))].play();
+    frames = this.frameCount;
+    noteColor3 = 40;
+    noteColor4 = 40;
+    hit2 = false;
+  } else if (hit2 == false) {
+    noteColor3 = noteColor3 * 1.055;
+    noteColor4 = noteColor4 * 1.04;
+    if (noteColor3 >= 159) {
+      hit2 = true;
+    }
+  } else {
+    if (noteColor3 >= 40) {
+      noteColor3 *= 0.983;
+    }
+    if (noteColor4 >= 40) {
+      noteColor4 *= 0.983;
+    }
+  }
+  stroke(noteColor3);
+  push();
+  translate(width / 2 + note_i_2 * w, height / 2 + note_j_2 * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+  stroke(noteColor4);
+  push();
+  translate(width / 2 + note_i_2 * w, height / 2 + (note_j_2 + 2) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + note_i_2 * w, height / 2 + (note_j_2 - 2) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_2 - 1) * w, height / 2 + (note_j_2 - 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_2 - 1) * w, height / 2 + (note_j_2 + 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_2 + 1) * w, height / 2 + (note_j_2 - 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_2 + 1) * w, height / 2 + (note_j_2 + 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+  pop();
+  /*------------------------------number3----------------------------*/
+  push();
+  if (vol >= 0.03 && vol <= 0.04) {
+    frameRate(30);
+    note_i_3 = int(random([6, -6]));
+
+    note_j_3 = int(random(-4, 4)) * 2;
+
+    carrier[int(random(31, 61))].play();
+    frames = this.frameCount;
+    noteColor5 = 40;
+    noteColor6 = 40;
+    hit3 = false;
+  } else if (hit3 == false) {
+    noteColor5 = noteColor5 * 1.055;
+    noteColor6 = noteColor6 * 1.04;
+    if (noteColor5 >= 159) {
+      hit3 = true;
+    }
+  } else {
+    if (noteColor5 >= 40) {
+      noteColor5 *= 0.983;
+    }
+    if (noteColor6 >= 40) {
+      noteColor6 *= 0.983;
+    }
+  }
+  stroke(noteColor5);
+  push();
+  translate(width / 2 + note_i_3 * w, height / 2 + note_j_3 * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+  stroke(noteColor6);
+  push();
+  translate(width / 2 + note_i_3 * w, height / 2 + (note_j_3 + 2) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + note_i_3 * w, height / 2 + (note_j_3 - 2) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_3 - 1) * w, height / 2 + (note_j_3 - 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_3 - 1) * w, height / 2 + (note_j_3 + 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_3 + 1) * w, height / 2 + (note_j_3 - 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
+
+  push();
+  translate(width / 2 + (note_i_3 + 1) * w, height / 2 + (note_j_3 + 1) * h);
+  if (n == 24) {
+    rotate(15);
+  }
+  polygon(0, 0, n);
+  pop();
   pop();
 }

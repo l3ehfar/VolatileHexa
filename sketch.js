@@ -15,14 +15,24 @@ var step2 = 100;
 var step3 = 65;
 var step4 = 40;
 var note_i = -10,
-  note_j = -10;
+  note_j = -10,
+  note_i_2 = -10,
+  note_j_2 = -10,
+  note_i_3 = -10,
+  note_j_3 = -10;
 var noteColor = 40.0,
-  noteColor2 = 100.0;
+  noteColor2 = 100.0,
+  noteColor3 = 40.0,
+  noteColor4 = 100.0,
+  noteColor5 = 40.0,
+  noteColor6 = 100.0;
 let mic;
-var hit = false;
+var hit = false,
+  hit2 = false,
+  hit3 = false;
 var frames;
 function preload() {
-  for (let i = 1; i < 9; ++i) {
+  for (let i = 1; i < 87; ++i) {
     carrier[i] = loadSound(i + EXT);
   }
 }
