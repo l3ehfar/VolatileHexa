@@ -32,7 +32,7 @@ var hit = false,
   hit3 = false;
 var frames;
 function preload() {
-  for (let i = 1; i < 87; ++i) {
+  for (let i = 1; i < 82; ++i) {
     carrier[i] = loadSound(i + EXT);
   }
 }
@@ -71,6 +71,8 @@ function draw() {
   }*/
   autoTransition();
   mainShow(n);
+  if (vol >= 0.05) {
+  }
 }
 function touchStarted() {
   getAudioContext().resume();

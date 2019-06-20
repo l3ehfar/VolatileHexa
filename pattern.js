@@ -100,6 +100,12 @@ function pattern(w, h) {
     step4 = map(timer, 106500.0, 108000.0, 65, 40);
   }
   for (var i = -10; i <= 10; i++) {
+    if (vol >= 0.03) {
+      var r = int(random(-7, 7));
+      if (i == r) {
+        fill(step1);
+      }
+    }
     if (i % 2 == 0) {
       for (j = -16; j <= 16; j += 2) {
         if (i == 0 && j == 0) {
@@ -148,7 +154,6 @@ function pattern(w, h) {
         } else {
           stroke(40);
         }
-
         push();
         translate(width / 2 + i * w, height / 2 + j * h);
         if (n == 24) {
@@ -213,13 +218,13 @@ function pattern(w, h) {
     }
   }
   push();
-  if (vol >= 0.05) {
+  if (vol >= 0.051) {
     frameRate(30);
     note_i = int(random([5, 7]));
 
     note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
 
-    carrier[int(random(61, 87))].play();
+    carrier[int(random(61, 82))].play();
     frames = this.frameCount;
     noteColor = 40;
     noteColor2 = 40;
@@ -297,7 +302,7 @@ function pattern(w, h) {
   pop();
   /*--------------------number2------------------------*/
   push();
-  if (vol >= 0.04 && vol <= 0.05) {
+  if (vol >= 0.01 && vol <= 0.038) {
     frameRate(30);
     note_i_2 = int(random([-7, -5]));
 
@@ -381,7 +386,7 @@ function pattern(w, h) {
   pop();
   /*------------------------------number3----------------------------*/
   push();
-  if (vol >= 0.03 && vol <= 0.04) {
+  if (vol >= 0.04 && vol <= 0.049) {
     frameRate(30);
     note_i_3 = int(random([6, -6]));
 
