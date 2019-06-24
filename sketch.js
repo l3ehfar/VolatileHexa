@@ -71,8 +71,6 @@ function draw() {
   }*/
   autoTransition();
   mainShow(n);
-  if (vol >= 0.05) {
-  }
 }
 function touchStarted() {
   getAudioContext().resume();

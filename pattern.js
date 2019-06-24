@@ -100,7 +100,7 @@ function pattern(w, h) {
     step4 = map(timer, 106500.0, 108000.0, 65, 40);
   }
   for (var i = -10; i <= 10; i++) {
-    if (vol >= 0.03) {
+    if (vol >= 0.25) {
       var r = int(random(-7, 7));
       if (i == r) {
         fill(step1);
@@ -218,7 +218,7 @@ function pattern(w, h) {
     }
   }
   push();
-  if (vol >= 0.051) {
+  if (vol >= 0.3) {
     frameRate(30);
     note_i = int(random([5, 7]));
 
@@ -302,7 +302,7 @@ function pattern(w, h) {
   pop();
   /*--------------------number2------------------------*/
   push();
-  if (vol >= 0.01 && vol <= 0.038) {
+  if (vol >= 0.2 && vol <= 0.24) {
     frameRate(30);
     note_i_2 = int(random([-7, -5]));
 
@@ -386,7 +386,7 @@ function pattern(w, h) {
   pop();
   /*------------------------------number3----------------------------*/
   push();
-  if (vol >= 0.04 && vol <= 0.049) {
+  if (vol >= 0.25 && vol <= 0.29) {
     frameRate(30);
     note_i_3 = int(random([6, -6]));
 
