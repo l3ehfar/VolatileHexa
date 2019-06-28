@@ -218,7 +218,7 @@ function pattern(w, h) {
     }
   }
   push();
-  if (vol >= 0.3) {
+  if (vol >= 0.9) {
     frameRate(30);
     note_i = int(random([5, 7]));
 
@@ -302,7 +302,7 @@ function pattern(w, h) {
   pop();
   /*--------------------number2------------------------*/
   push();
-  if (vol >= 0.2 && vol <= 0.24) {
+  if (vol >= 0.5 && vol <= 0.54) {
     frameRate(30);
     note_i_2 = int(random([-7, -5]));
 
@@ -386,7 +386,7 @@ function pattern(w, h) {
   pop();
   /*------------------------------number3----------------------------*/
   push();
-  if (vol >= 0.25 && vol <= 0.29) {
+  if (vol >= 0.55 && vol <= 0.79) {
     frameRate(30);
     note_i_3 = int(random([6, -6]));
 
