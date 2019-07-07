@@ -30,7 +30,7 @@ let mic;
 var hit = false,
   hit2 = false,
   hit3 = false;
-var col = 255;
+var frames;
 function preload() {
   for (let i = 1; i < 82; ++i) {
     carrier[i] = loadSound("/music/" + i + EXT);
@@ -40,6 +40,16 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   carrier[1].loop();
+  /*
+  for (let i = 1; i < 4; ++i) {
+    carrier[i].play();
+    amp[i] = new p5.Amplitude();
+    amp[i].setInput(carrier[i]);
+    fft[i] = new p5.FFT();
+    fft[i].setInput(carrier[i]);
+    peakDetect[i] = new p5.PeakDetect(4000, 12000, 0.08);
+  }
+  */
   mic = new p5.AudioIn();
 
   mic.start();
@@ -49,6 +59,16 @@ function draw() {
   frameRate(40);
   timer = int(millis() - last);
   vol = mic.getLevel();
+  /* vol = amp[3].getLevel();
+  for (let i = 1; i < 4; ++i) {
+    fft[i].analyze();
+    peakDetect[i].update(fft[i]);
+  }
+  if (peakDetect[1].isDetected) {
+    itsOn = 600;
+  } else {
+    itsOn *= 0.99;
+  }*/
   autoTransition();
   mainShow(n);
 }
