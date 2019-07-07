@@ -30,6 +30,7 @@ let mic;
 var hit = false,
   hit2 = false,
   hit3 = false;
+var col = 255;
 function preload() {
   for (let i = 1; i < 82; ++i) {
     carrier[i] = loadSound("/music/" + i + EXT);
