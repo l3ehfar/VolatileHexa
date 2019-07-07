@@ -100,17 +100,64 @@ function pattern(w, h) {
     step4 = map(timer, 106500.0, 108000.0, 65, 40);
   }
   for (var i = -10; i <= 10; i++) {
-    if (vol >= 0.55 && vol <= 0.89) {
-      var r = int(random(-7, 7));
-      if (i == r) {
-        fill(step1);
-      }
-    }
+    noFill();
     if (i % 2 == 0) {
       for (j = -16; j <= 16; j += 2) {
         if (i == 0 && j == 0) {
+          if (vol >= 0.4 && vol <= 0.59) {
+            var r = int(random(-7, 7));
+            if (i == r) {
+              noStroke();
+              if (random(1) > 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(110), random(20));
+                }
+              }
+              if (random(1) > 0.3 && random(1) < 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(20), random(100));
+                }
+              }
+            }
+          }
           stroke(step1);
         } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
+          if (vol >= 0.4 && vol <= 0.59) {
+            var r = int(random(-7, 7));
+            if (i == r) {
+              noStroke();
+              if (random(1) > 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(110), random(20));
+                }
+              }
+              if (random(1) > 0.3 && random(1) < 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(20), random(100));
+                }
+              }
+            }
+          }
           stroke(step1);
         } else if (
           (i == -2 && j == 0) ||
@@ -122,6 +169,32 @@ function pattern(w, h) {
           (i == 0 && j == -4) ||
           (i == 0 && j == +4)
         ) {
+          if (vol >= 0.4 && vol <= 0.59) {
+            var r = int(random(-7, 7));
+            if (i == r) {
+              noStroke();
+              if (random(1) > 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(110), random(20));
+                }
+              }
+              if (random(1) > 0.3 && random(1) < 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(20), random(100));
+                }
+              }
+            }
+          }
           stroke(step2);
         } else if (
           (i == -2 && j == 4) ||
@@ -131,6 +204,32 @@ function pattern(w, h) {
           (i == 0 && j == -6) ||
           (i == 0 && j == 6)
         ) {
+          if (vol >= 0.4 && vol <= 0.59) {
+            var r = int(random(-7, 7));
+            if (i == r) {
+              noStroke();
+              if (random(1) > 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(110), random(20));
+                }
+              }
+              if (random(1) > 0.3 && random(1) < 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(20), random(100));
+                }
+              }
+            }
+          }
           stroke(step3);
         } else if (
           (i == -2 && j == 6) ||
@@ -150,8 +249,35 @@ function pattern(w, h) {
           (i == -4 && j == 0) ||
           (i == +4 && j == 0)
         ) {
+          if (vol >= 0.4 && vol <= 0.59) {
+            var r = int(random(-7, 7));
+            if (i == r) {
+              noStroke();
+              if (random(1) > 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(110), random(20));
+                }
+              }
+              if (random(1) > 0.3 && random(1) < 0.9) {
+                for (var j = 0; j < 100; j++) {
+                  if (random(1) > 0.5) {
+                    fill(150);
+                  } else {
+                    fill(50);
+                  }
+                  rect(random(width), random(height), random(20), random(100));
+                }
+              }
+            }
+          }
           stroke(step4);
         } else {
+          noFill();
           stroke(40);
         }
         push();
