@@ -36,6 +36,9 @@ function preload() {
     carrier[i] = loadSound(i + EXT);
   }
 }
+function touchStarted() {
+  getAudioContext().resume();
+}
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
@@ -51,9 +54,6 @@ function draw() {
   vol = mic.getLevel();
   autoTransition();
   mainShow(n);
-}
-function touchStarted() {
-  getAudioContext().resume();
 }
 
 function autoTransition() {
