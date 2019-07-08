@@ -36,6 +36,10 @@ function preload() {
     carrier[i] = loadSound("/music/" + i + EXT);
   }
 }
+function touchStarted() {
+  getAudioContext().resume();
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
@@ -82,7 +86,4 @@ function autoTransition() {
     last = millis();
     n = 6;
   }
-}
-function touchStarted() {
-  getAudioContext().resume();
 }
