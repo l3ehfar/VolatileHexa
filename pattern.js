@@ -112,6 +112,7 @@ function pattern(w, h) {
               fill(50);
             }
             rect(random(width), random(height), random(110), random(20));
+            rect(random(width), random(height), 10, 10);
           }
         }
         if (random(1) > 0.3 && random(1) < 0.9) {
@@ -122,6 +123,13 @@ function pattern(w, h) {
               fill(50);
             }
             rect(random(width), random(height), random(20), random(100));
+            rect(random(width), random(height), 6, 6);
+          }
+        }
+        if (random(1) < 0.3) {
+          for (var j = 0; j < 100; j++) {
+            fill(random(250));
+            rect(random(width), random(height), 8, 8);
           }
         }
       }
