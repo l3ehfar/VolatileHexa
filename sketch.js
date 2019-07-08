@@ -33,11 +33,8 @@ var hit = false,
 var col = 255;
 function preload() {
   for (let i = 1; i < 82; ++i) {
-    carrier[i] = loadSound("/music/" + i + EXT);
+    carrier[i] = loadSound(i + EXT);
   }
-}
-function touchStarted() {
-  getAudioContext().resume();
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
