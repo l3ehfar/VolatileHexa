@@ -99,8 +99,6 @@ function polygon(x, y, npoints) {
     }
     if (vol >= 0.4 && vol <= 0.59) {
       radius = random(70, 100);
-    } else {
-      radius = 100;
     }
 
     let sx = x + cos(a) * radius;
