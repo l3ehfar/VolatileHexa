@@ -35,7 +35,7 @@ var col = 255;
 var circles;
 function preload() {
   for (let i = 1; i < 82; ++i) {
-    carrier[i] = loadSound(i + EXT);
+    carrier[i] = loadSound("/music/" + i + EXT);
   }
 }
 function setup() {
