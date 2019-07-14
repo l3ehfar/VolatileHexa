@@ -240,6 +240,7 @@ function pattern(w, h) {
       noteColor2 *= 0.983;
     }
   }
+
   stroke(noteColor);
   push();
   translate(width / 2 + note_i * w, height / 2 + note_j * h);

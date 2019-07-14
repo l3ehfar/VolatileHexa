@@ -35,7 +35,7 @@ var col = 255;
 var circles;
 function preload() {
   for (let i = 1; i < 82; ++i) {
-    carrier[i] = loadSound("/music/" + i + EXT);
+    carrier[i] = loadSound("music/" + i + EXT);
   }
 }
 function setup() {
@@ -124,7 +124,7 @@ function Circle(x, y) {
 
   this.grow = function() {
     if (this.growing) {
-      this.r += 1.5;
+      this.r += 2;
     }
     if (this.r >= 30) {
       this.r = 10;
