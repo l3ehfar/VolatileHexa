@@ -32,17 +32,33 @@ var hit = false,
   hit3 = false;
 var frames;
 var col = 255;
-var circles;
+var img = [];
+const maxXChange = 25;
+const maxYChange = 5;
+const yNoiseChange = 0.05;
+const timeNoiseChange = 0.13;
+var inverted = false;
+var drops = [];
+
 function preload() {
   for (let i = 1; i < 82; ++i) {
     carrier[i] = loadSound("music/" + i + EXT);
   }
+  img[0] = loadImage("1.png");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  img[1] = createGraphics(windowWidth, windowHeight);
   angleMode(DEGREES);
   carrier[1].loop();
-  circles = [];
+  image(img[0], -maxXChange, -maxYChange);
+  image(img[1], -maxXChange, -maxYChange);
+  for (let i = 0; i < 100; i++) {
+    drawStreak();
+  }
+  for (var i = 0; i < 20; i++) {
+    drops[i] = new Drop();
+  }
   /*
   for (let i = 1; i < 4; ++i) {
     carrier[i].play();
@@ -59,47 +75,9 @@ function setup() {
 }
 function draw() {
   background(26);
-  frameRate(40);
   timer = int(millis() - last);
   vol = mic.getLevel();
-  if (vol >= 0.35 && vol <= 0.9) {
-    var total = 5;
-    var count = 0;
 
-    while (count < total) {
-      var newC = newCircle();
-      if (newC !== null) {
-        circles.push(newC);
-        count++;
-      }
-    }
-
-    for (var i = 0; i < circles.length; i++) {
-      var circle = circles[i];
-
-      if (circle.growing) {
-        if (circle.edges()) {
-          circle.growing = false;
-        } else {
-          for (var j = 0; j < circles.length; j++) {
-            var other = circles[j];
-            if (circle !== other) {
-              var d = dist(circle.x, circle.y, other.x, other.y);
-              var distance = circle.r + other.r;
-
-              if (d - 2 < distance) {
-                circle.growing = false;
-                break;
-              }
-            }
-          }
-        }
-      }
-
-      circle.show();
-      circle.grow();
-    }
-  }
   /* vol = amp[3].getLevel();
   for (let i = 1; i < 4; ++i) {
     fft[i].analyze();
@@ -110,64 +88,21 @@ function draw() {
   } else {
     itsOn *= 0.99;
   }*/
+  /*for (var x = 0; x < width; x += width / 10) {
+    for (var y = 0; y < height; y += height / 10) {
+      img.stroke(255);
+      img.strokeWeight(4);
+      img.noFill();
+      img.line(x, 0, x, height);
+      img.line(0, y, width, y);
+    }
+  }*/
   autoTransition();
   mainShow(n);
 }
 function touchStarted() {
   getAudioContext().resume();
 }
-function Circle(x, y) {
-  this.x = x;
-  this.y = y;
-  this.r = 10;
-  this.growing = true;
-
-  this.grow = function() {
-    if (this.growing) {
-      this.r += 2;
-    }
-    if (this.r >= 30) {
-      this.r = 10;
-    }
-  };
-
-  this.show = function() {
-    noStroke();
-    fill(random(50, 255), 100);
-    rectMode(CENTER);
-    rect(this.x, this.y, this.r * 2, this.r * 1.5);
-    rect(this.y * 2, this.x, this.r * 1.5, this.r * 2);
-    rect(this.x * 2, this.y, this.r * 2, this.r);
-  };
-
-  this.edges = function() {
-    return (
-      this.x + this.r >= width ||
-      this.x - this.r <= 0 ||
-      this.y + this.r >= height ||
-      this.y - this.r <= 0
-    );
-  };
-}
-function newCircle() {
-  var x = random(width);
-  var y = random(height);
-  var valid = true;
-  for (var i = 0; i < circles.length; i++) {
-    var circle = circles[i];
-    var d = dist(x, y, circle.x, circle.y);
-    if (d < circle.r) {
-      valid = false;
-      break;
-    }
-  }
-  if (valid) {
-    return new Circle(x, y);
-  } else {
-    return null;
-  }
-}
-
 function autoTransition() {
   if (timer >= 0.0 && timer <= 20000.0) {
     n = map(timer, 0.0, 20000.0, 6, 12);

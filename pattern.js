@@ -105,8 +105,22 @@ function pattern(w, h) {
       for (j = -16; j <= 16; j += 2) {
         if (i == 0 && j == 0) {
           stroke(step1);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if ((i == 0 && j == 2) || (i == 0 && j == -2)) {
           stroke(step1);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == -2 && j == 0) ||
           (i == +2 && j == 0) ||
@@ -118,6 +132,13 @@ function pattern(w, h) {
           (i == 0 && j == +4)
         ) {
           stroke(step2);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == -2 && j == 4) ||
           (i == +2 && j == 4) ||
@@ -127,6 +148,13 @@ function pattern(w, h) {
           (i == 0 && j == 6)
         ) {
           stroke(step3);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == -2 && j == 6) ||
           (i == +2 && j == 6) ||
@@ -146,17 +174,24 @@ function pattern(w, h) {
           (i == +4 && j == 0)
         ) {
           stroke(step4);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else {
           noFill();
           stroke(40);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon(0, 0, n);
+          pop();
         }
-        push();
-        translate(width / 2 + i * w, height / 2 + j * h);
-        if (n == 24) {
-          rotate(15);
-        }
-        polygon(0, 0, n);
-        pop();
       }
     } else {
       for (j = -15; j <= 15; j += 2) {
@@ -167,6 +202,13 @@ function pattern(w, h) {
           (i == -1 && j == -1)
         ) {
           stroke(step1);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == 1 && j == 3) ||
           (i == 1 && j == -3) ||
@@ -174,6 +216,13 @@ function pattern(w, h) {
           (i == -1 && j == -3)
         ) {
           stroke(step2);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == 3 && j == 1) ||
           (i == 3 && j == -1) ||
@@ -189,6 +238,13 @@ function pattern(w, h) {
           (i == -1 && j == -5)
         ) {
           stroke(step3);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else if (
           (i == 3 && j == -5) ||
           (i == -3 && j == 5) ||
@@ -200,23 +256,32 @@ function pattern(w, h) {
           (i == -1 && j == -7)
         ) {
           stroke(step4);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon2(0, 0, n);
+          pop();
         } else {
           noFill();
           stroke(40);
+          push();
+          translate(width / 2 + i * w, height / 2 + j * h);
+          if (n == 24) {
+            rotate(15);
+          }
+          polygon(0, 0, n);
+          pop();
         }
-        push();
-        translate(width / 2 + i * w, height / 2 + j * h);
-        if (n == 24) {
-          rotate(15);
-        }
-        polygon(0, 0, n);
-        pop();
       }
     }
   }
   push();
-  if (vol >= 0.61) {
-    frameRate(30);
+  if (vol >= 0.0) {
+    glitch();
+  }
+  if (vol >= 0.061) {
     note_i = int(random([5, 7]));
 
     note_j = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
@@ -300,8 +365,7 @@ function pattern(w, h) {
   pop();
   /*--------------------number2------------------------*/
   push();
-  if (vol >= 0.35 && vol <= 0.5) {
-    frameRate(30);
+  if (vol >= 0.01 && vol <= 0.038) {
     note_i_2 = int(random([-7, -5]));
 
     note_j_2 = int(random([-1, 1, -3, 3, 5, -5, 7, -7]));
@@ -384,8 +448,14 @@ function pattern(w, h) {
   pop();
   /*------------------------------number3----------------------------*/
   push();
-  if (vol >= 0.51 && vol <= 0.6) {
-    frameRate(30);
+  if (vol >= 0.04 && vol <= 0.06) {
+    push();
+    fill(255, 255, 255);
+    noStroke();
+    var randHeight = random(height);
+    var randWidth = random(width);
+    rect(0, randHeight, width, 100);
+    pop();
     note_i_3 = int(random([6, -6]));
 
     note_j_3 = int(random(-4, 4)) * 2;
