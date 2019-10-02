@@ -42,14 +42,14 @@ function drawStreak() {
 
   //copy(img, 0, y, img.width, h, xChange - maxXChange, -maxYChange + y + yChange, img.width, h);
   image(
-    img[0],
+    buffer,
     xChange - maxXChange,
     -maxYChange + y + yChange,
-    img[0].width,
+    buffer.width,
     h,
     0,
     y,
-    img[0].width,
+    buffer.width,
     h
   );
   image(
@@ -64,7 +64,7 @@ function drawStreak() {
     h
   );
 }
-
+/*
 function glitch2() {
   for (var i = 0; i < drops.length; i++) {
     drops[i].fall();
